@@ -1,0 +1,251 @@
+.skills-section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.skill-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #405C85;
+    height : 5rem;
+    margin-bottom: 4rem;
+}
+
+/* ///// CSS front-skills ////  */ 
+
+
+
+.title-front {
+    margin-top: 3rem;
+    text-decoration: underline;
+   
+}
+.skills-title {
+    color: #fff;
+    
+}
+
+.front-skills {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom : 4rem;
+    
+
+}
+
+.title-back {
+    margin-top: 5rem;
+    text-decoration: underline;
+}
+
+.skills-logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    gap:4px;
+    border:solid 2px black;
+    padding: 0.5rem
+}
+.skills-img {
+    width:50px;
+    height: 50px;
+    
+
+}
+
+.back-logo {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: solid 2px black;
+    padding : 0.5rem; 
+    width: 50vw;
+
+}
+
+.express-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.node-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.php-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.postgresql-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.mysql-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+.title-front {
+    margin-top: 3rem;
+    text-decoration: underline;
+   
+}
+.skills-title {
+    color: #fff;
+    
+}
+
+.front-skills {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom : 4rem;
+    
+
+}
+
+.title-back {
+    margin-top: 5rem;
+    text-decoration: underline;
+}
+
+.skills-logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    gap:4px;
+    border:solid 2px black;
+    padding: 0.5rem
+}
+.skills-img {
+    width:50px;
+    height: 50px;
+    
+
+}
+
+.back-logo {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: solid 2px black;
+    padding : 0.5rem; 
+    width: 50vw;
+
+}
+
+.express-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.node-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.php-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.postgresql-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.mysql-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+/* //// CSS Back-end Skills //// */
+
+.vscode-img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width:50px;
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.figma-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.git-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.docker-img {
+    width:50px;
+    height: 50px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.postman-img {
+    width:50px;
+    height: 50px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+
+
+
+
+
