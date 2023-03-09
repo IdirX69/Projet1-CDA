@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.home-section {
+  height: 100vh;
+  width: 100vw;
+}
+.home-img {
+  height: 30vh;
+}
+.home-img img {
+  height: 30vh;
+  width: 100%;
+}
