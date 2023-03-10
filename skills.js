@@ -41,11 +41,11 @@ const { scrollTop, clientHeight } = document.documentElement;
 
  */
 /* function scrollReveal() {
-  var revealPoint = 150;
+  const revealPoint = 150;
   var revealElement = document.querySelector(".title-front");
-  for (var i = 0; i < revealElement.length; i++) {
-    var windowHeight = window.innerHeight;
-    var revealTop = revealElement[i].getBoundingClientRect().top;
+  for (let i = 0; i < revealElement.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = revealElement[i].getBoundingClientRect().top;
     if (revealTop < windowHeight - revealPoint) {
       revealElement[i].classList.add("animate-left");
     } else {
