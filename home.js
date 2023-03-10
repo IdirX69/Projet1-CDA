@@ -1,20 +1,19 @@
 const target = document.getElementById("text-target");
 let array = [
   "React",
-  "Node",
-  "Mysql",
-  "Git",
-  "Express",
   "Javascript",
   "Html",
   "Css",
+  "Node Js",
+  "Mysql",
+  "Express",
+  "Git",
 ];
 let wordIndex = 0;
 let letterIndex = 0;
 const createLetter = () => {
   const letter = document.createElement("span");
   target.appendChild(letter);
-  letter.classList.add("letter");
   letter.style.opacity = "0";
   letter.style.animation = "anim 5s ease forwards";
   letter.textContent = array[wordIndex][letterIndex];
@@ -37,9 +36,9 @@ const loop = () => {
       wordIndex++;
       setTimeout(() => {
         loop();
-      }, 2000);
+      }, 2100);
     }
-  }, 80);
+  }, 60);
 };
 createLetter();
 loop();

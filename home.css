@@ -38,7 +38,7 @@ h3 {
 }
 .home-paragraph span {
   color: rgb(6, 248, 248);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .home-img {
   text-align: center;
@@ -73,11 +73,9 @@ h3 {
 
 @keyframes anim {
   25% {
-    transform: translateZ(0px);
     opacity: 1;
   }
   32% {
     opacity: 0;
-    transform: translateZ(-280px) translateX(200px);
   }
 }
