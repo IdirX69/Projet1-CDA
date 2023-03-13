@@ -7,7 +7,8 @@ let array = [
   "Node Js",
   "Mysql",
   "Express",
-  "Git",
+  "React Native",
+  "Graph QL",
 ];
 let wordIndex = 0;
 let letterIndex = 0;
