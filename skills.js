@@ -56,3 +56,5 @@ const { scrollTop, clientHeight } = document.documentElement;
 
 window.addEventListener("scroll", scrollReveal);
  */
+
+// Wrap every letter in a span

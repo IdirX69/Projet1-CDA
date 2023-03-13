@@ -1,4 +1,5 @@
 .project-background {
+    
     display : flex;
     justify-content: center;
     background-color: white;
@@ -6,14 +7,30 @@
     box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
     margin-bottom: 1em;
 
+    
+
+}
+
+.project-background.animate {
+
+    animation: backgroundTransition 3s;
+
+
 }
 
 .title-project  {
+    opacity: 0;
+    visibility: hidden;
     font-family: "Wallpoet", sans-serif;
     font-size: 2em;
     line-height: 1em;
     justify-content: center;
     
+}
+
+.title-project .letter {
+    display: inline-block;
+    line-height: 1em
 }
  
 #project h3 {
@@ -53,6 +70,21 @@
 
 }
 
+@keyframes backgroundTransition {
+    0% { 
+
+        transform: translateX(-100%);
+        
+
+    }
+
+    100% {
+
+        transform: translateX(0%);
+    }
+
+    
+}
 @keyframes rotationLeftToRight {
     0% {
         transform: rotate(-3deg)
