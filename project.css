@@ -1,0 +1,81 @@
+.project-background {
+    display : flex;
+    justify-content: center;
+    background-color: white;
+    padding: 1rem 0rem;
+    box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
+    margin-bottom: 1em;
+
+}
+
+.title-project  {
+    font-family: "Wallpoet", sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    justify-content: center;
+    
+}
+ 
+#project h3 {
+    
+    text-align: center;
+    font-size: 1,5rem;
+    color: white;
+    padding : 1rem; 
+
+
+}
+
+#project img {
+    box-shadow: 10px 8px 11px 0px rgba(0, 0, 0, 0.47);
+
+}
+
+.card-project {
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.project-od {
+    height: 12rem;
+    width: 90vw;
+    animation: rotationLeftToRight 10s linear infinite;
+
+    
+}
+
+.project-apig {
+    height: 12rem;
+    width: 90vw;
+    animation: rotationRightToLeft 10s linear infinite;
+
+}
+
+@keyframes rotationLeftToRight {
+    0% {
+        transform: rotate(-3deg)
+    }
+    50% {
+        transform: rotate(3deg);
+    } 
+
+    100% {
+        transform: rotate(-3deg)
+
+    }
+}
+@keyframes rotationRightToLeft {
+    0% {
+        transform: rotate(3deg)
+    }
+    50% {
+        transform: rotate(-3deg);
+    } 
+
+    100% {
+        transform: rotate(3deg)
+
+    }
+}

@@ -3,12 +3,17 @@
   width: 100vw;
 }
 
+.skills-section h2 {
+  font-family: "Wallpoet";
+  color: black;
+}
+
 .skill-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #405c85;
   height: 5rem;
+  background-color: white;
   margin-bottom: 4rem;
 }
 
@@ -17,14 +22,20 @@
 .title-front {
   margin-top: 3rem;
   text-decoration: underline;
-  color: #fff;
+  
   /* opacity: 0; */
   /* transform: translateX(-100%); */
   /* transition: opacity 0.5s, transform 1.5s; */
 }
 
 .skills-title {
-  color: #fff;
+    font-family: "edo", sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    justify-content: center;
+    
+    
+    
 }
 
 .front-skills {
