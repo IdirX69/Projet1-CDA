@@ -55,6 +55,33 @@ h3 {
   margin: 0rem 1rem;
 }
 
+/* Navigation */
+.navigation {
+  height: 50px;
+  width: 100%;
+  margin-left: 5px;
+  position: fixed;
+  top: 0;
+  background-color: rgb(60, 73, 77);
+  z-index: 10;
+}
+.navigation ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid aqua;
+}
+.navigation li {
+  color: white;
+  font-family: "Wallpoet";
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+a {
+  color: white;
+}
+
 /* animation */
 @keyframes avatar {
   0% {
