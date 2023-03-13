@@ -9,10 +9,6 @@ const animeCss = () => {
   bgAnimate.classList.add("animate");
 };
 
-const removeAnimeCss = () => {
-  bgAnimate.remove("");
-};
-
 const animeJs = () => {
   setTimeout(function () {
     const textWrapper = document.querySelector(".title-project");

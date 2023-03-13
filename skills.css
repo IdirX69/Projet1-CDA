@@ -3,19 +3,57 @@
   width: 100vw;
 }
 
-.skills-section h2 {
-  font-family: "Wallpoet";
-  color: black;
-}
+
 
 .skill-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
+  padding: 1rem 0rem;
+
   background-color: white;
   margin-bottom: 4rem;
 }
+
+.skill-background.animate {
+  animation: backgroundSkillsTransition 3s;
+
+}
+
+
+
+.skills-title {
+  opacity: 0;
+  visibility: hidden;
+  color: black;
+  font-family: "Wallpoet", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  justify-content: center;
+    
+    
+}
+
+.skills-title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@keyframes backgroundSkillsTransition {
+  0% { 
+
+      transform: translateX(-100%);
+      
+
+  }
+
+  100% {
+
+      transform: translateX(0%);
+  }
+}
+
 
 /* ///// CSS front-skills ////  */
 
@@ -28,15 +66,6 @@
   /* transition: opacity 0.5s, transform 1.5s; */
 }
 
-.skills-title {
-    font-family: "edo", sans-serif;
-    font-size: 2em;
-    line-height: 1em;
-    justify-content: center;
-    
-    
-    
-}
 
 .front-skills {
   display: flex;
@@ -159,9 +188,7 @@
   margin-top: 3rem;
   text-decoration: underline;
 }
-.skills-title {
-  color: #fff;
-}
+
 
 .front-skills {
   display: flex;
