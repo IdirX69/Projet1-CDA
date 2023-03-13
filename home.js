@@ -1,3 +1,4 @@
+const navBar = document.querySelector(".navigation");
 const target = document.getElementById("text-target");
 let array = [
   "React",
@@ -43,3 +44,50 @@ const loop = () => {
 };
 createLetter();
 loop();
+
+// Navigation
+
+let lastScrollValue = 0;
+
+document.addEventListener("scroll", () => {
+  let top = document.documentElement.scrollTop;
+  if (lastScrollValue < top) {
+    navBar.classList.add("hidden");
+  } else {
+    navBar.classList.remove("hidden");
+  }
+  lastScrollValue = top;
+});
+
+const welcomeTitle = document.querySelector(".welcome-title");
+const homeParagraph = document.querySelector(".paragraph");
+let title = "Bonjour je suis Wild";
+let paragrphe =
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tenetur culpa distinctio quaerat odit numquam atque ratione dolorem, adipisci doloribus.";
+
+const createTitle = (word, element, index) => {
+  const letter = document.createElement("span");
+  letter.textContent = word[index];
+  element.appendChild(letter);
+};
+
+pIndex = 0;
+lIndex = 0;
+const titleLoop = (word, element, index) => {
+  setTimeout(() => {
+    if (index >= word.length) {
+      index = 0;
+    } else if (index < word.length) {
+      createTitle(word, element, index);
+      index++;
+      titleLoop(word, element, index);
+    } else {
+      index = 0;
+    }
+  }, 60);
+};
+
+titleLoop(title, welcomeTitle, lIndex);
+setTimeout(() => {
+  titleLoop(paragrphe, homeParagraph, pIndex);
+}, 2200);
