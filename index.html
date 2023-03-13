@@ -1,59 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navigation">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="home-section"></section>
-  <section class="skills-section"></section>
-  <section class="project-section"></section>
-
-  <section class="contact-section">
-    <h2>Contact</h2>
-    <form action="#">
-
-      <div id="from">
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="skills.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home-section">Acceuil</a></li>
+          <li>Skills</li>
+          <li>Prjets</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home-section" id="home-section">
+      <div class="home-paragraph">
+        <h2>
+          Bonjour,<br />
+          Je suis Wild
+        </h2>
+        <br />
+        <h3>Et je suis developpeur web <span id="text-target"></span></h3>
+        <br />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+          tenetur culpa distinctio quaerat odit numquam atque ratione dolorem,
+          adipisci doloribus.
+        </p>
+      </div>
+      <div class="social-network">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>
+        <i class="fa-brands fa-github fa-2xl"></i>
+        <i class="fa-brands fa-instagram fa-2xl"></i>
+        <i class="fa-brands fa-twitter fa-2xl"></i>
+        <img src="" alt="" />
+      </div>
+      <div class="home-img">
+        <img src="./images/movileavatarXL.png" alt="avatar" />
+      </div>
+    </section>
+    <section class="skills-section">
+      <div class="skill-background">
+        <h2 class="skills-title">My Skills</h2>
       </div>
 
-      <div id="reply">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required>
+      <div class="front-skills">
+        <p class="title-front">Front-End Developper</p>
+        <div class="skills-logo">
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/css-3.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/html-5-logo.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/tailwindcss.png"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/react-2.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/react-2.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/javascript.svg"
+            alt="test"
+          />
+        </div>
+        <!-- <div id="revealPoint">Reveal Point</div> -->
       </div>
-
-      <div id="message">
-        <label for="msg" cols="30" rows="1">Message</label>
-        <textarea id="msg" name="user_message"></textarea>
+      <div class="back-skills">
+        <p class="title-back">Back-End Developper</p>
+        <div class="back-logo">
+          <img
+            class="express-img"
+            src="./assets/Skills-images/express.svg"
+            alt="test"
+          />
+          <img
+            class="node-img"
+            src="./assets/Skills-images/node-js.svg"
+            alt="test"
+          />
+          <img
+            class="php-img"
+            src="./assets/Skills-images/php.svg"
+            alt="test"
+          />
+          <img
+            class="postgresql-img"
+            src="./assets/Skills-images/postgresql.svg"
+            alt="test"
+          />
+          <img
+            class="mysql-img"
+            src="./assets/Skills-images/mysq.svg"
+            alt="test"
+          />
+        </div>
       </div>
-
-      <div class="button">
-        <button type="submit">Envoyer</button>
+      <div class="tools-skills">
+        <p class="title-back">Tools's Developper</p>
+        <div class="back-logo">
+          <img
+            class="git-img"
+            src="./assets/Skills-images/git.svg"
+            alt="test"
+          />
+          <img
+            class="figma-img"
+            src="./assets/Skills-images/figma.svg"
+            alt="test"
+          />
+          <img
+            class="vscode-img"
+            src="./assets/Skills-images/vscode.svg"
+            alt="test"
+          />
+          <img
+            class="docker-img"
+            src="./assets/Skills-images/docker.svg"
+            alt="test"
+          />
+          <img
+            class="postman-img"
+            src="./assets/Skills-images/postman.svg"
+            alt="test"
+          />
+        </div>
       </div>
+    </section>
+    <section class="project-section"></section>
 
-    </form>
-    <div id="logos">
-      <img src="./images/Rectangle 24.svg" alt="logo Linkedin ">
-      <img src="./images/Rectangle 25.svg" alt="logo github ">
-    </div>
-
-  </section>
-  <script src="index.js"></script>
-</body>
-
+      <section class="contact-section">
+        <h2>Contact</h2>
+        <form action="#">
+    
+          <div id="from">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+    
+          <div id="reply">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+    
+          <div id="message">
+            <label for="msg" cols="30" rows="1">Message</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </div>
+    
+          <div class="button">
+            <button type="submit">Envoyer</button>
+          </div>
+    
+        </form>
+        <div id="logos">
+          <img src="./images/Rectangle 24.svg" alt="logo Linkedin ">
+          <img src="./images/Rectangle 25.svg" alt="logo github ">
+        </div>
+    
+      
+    </section>
+    <script src="index.js"></script>
+    <script src="home.js"></script>
+    <script src="skills.js"></script>
+  </body>
 </html>
+.

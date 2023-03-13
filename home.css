@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Wallpoet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(60, 73, 77);
+}
+
+.home-section h2 {
+  font-family: "Wallpoet";
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+}
+.home-section {
+  margin: 2rem 0;
+  height: 100vh;
+}
+.home-section h2,
+p,
+h3 {
+  padding: 0 0.5rem;
+}
+.home-paragraph {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  color: white;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.home-paragraph span {
+  color: rgb(6, 248, 248);
+  font-size: 1.3rem;
+}
+.home-img {
+  text-align: center;
+  margin-top: 5rem;
+}
+.home-img img {
+  height: 280px;
+  border-radius: 140px;
+  animation: avatar linear 3.5s infinite alternate;
+}
+.fa-brands {
+  color: aqua;
+  margin: 0rem 1rem;
+}
+
+/* Navigation */
+.navigation {
+  height: 50px;
+  width: 100%;
+  margin-left: 5px;
+  position: fixed;
+  top: 0;
+  background-color: rgb(60, 73, 77);
+  z-index: 10;
+}
+.navigation ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid aqua;
+}
+.navigation li {
+  color: white;
+  font-family: "Wallpoet";
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+a {
+  color: white;
+}
+
+/* animation */
+@keyframes avatar {
+  0% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  50% {
+    transform: translateY(5px);
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes anim {
+  25% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+}
