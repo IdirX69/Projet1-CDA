@@ -1,38 +1,67 @@
-.contact-section > form div{
-display: flex;
-flex-direction: column;
-margin-top: 20px;
-}
-
-.contact-section [name = "name"]{
-    width: 105px;
-    border: none;
-    border-bottom: 1px solid black;
-}
-.contact-section [name = "email"]{
-    width: 137px;
-    border: none;
-    border-bottom: 1px solid black;
-}
-.contact-section [name = "user_message"]{
-    width: 279.5px;
-    border: none;
-    border-bottom: 1px solid black;
-}
-[type = "submit"]{    
-    width: 120px;
-    margin: auto;
-    border: none;
-    background-color: #D9D9D9;
-
-}
-#logos{
-    margin-top: 70%;
-    text-align: center;
-}
-#logos img {
-    margin-right: 25px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Wallpoet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
 }
 .contact-section {
     height: 100vh;
+    color: white;
+    padding-left: 5%;
+    margin-top: 4rem;
 }
+
+.contact-section>form div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+h2{
+    font-size: 24px;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.contact-section [name="name"] {
+    color: white;
+    width: 105px;
+    border-bottom: 1px solid white;
+    background-color: #37494e;
+}
+
+.contact-section [name="email"] {
+    color: white;
+    width: 137px;
+    border-bottom: 1px solid white;
+    background-color: #37494e;
+}
+
+.contact-section [name="user_message"] {
+    color: white;
+    width: 279.5px;
+    border-bottom: 1px solid white;
+    background-color: #37494e;
+}
+
+
+[type="submit"] {
+    text-align: center;
+    width: 122px;
+    height: 35px;
+    margin: auto;
+    background-color: #D9D9D9;
+
+}
+
+#logos {
+    margin-top: 100vh;
+    text-align: center;
+}
+
+#logos img {
+    margin-right: 25px;
+}
+
