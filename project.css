@@ -12,7 +12,6 @@
 }
 
 .project-background.animate {
-
     animation: backgroundTransition 3s;
 
 
@@ -29,9 +28,19 @@
 }
 
 .title-project .letter {
+
     display: inline-block;
     line-height: 1em
 }
+
+.reset {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    /* Ajoutez d'autres propriétés CSS si nécessaire */
+  }
+  
  
 #project h3 {
     
@@ -56,11 +65,20 @@
 }
 
 .project-od {
+    visibility: hidden;
+    opacity: 0;
     height: 12rem;
     width: 90vw;
     animation: rotationLeftToRight 10s linear infinite;
 
     
+}
+
+.project-od.apparition {
+    visibility: visible;
+    opacity: 1;
+    transition: 5s;
+
 }
 
 .project-apig {
@@ -85,6 +103,19 @@
 
     
 }
+
+@keyframes projectTransition {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 @keyframes rotationLeftToRight {
     0% {
         transform: rotate(-3deg)

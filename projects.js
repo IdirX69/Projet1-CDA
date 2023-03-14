@@ -4,9 +4,13 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
   "<span class='letter'>$&</span>"
 );
 const bgAnimate = document.querySelector(".project-background");
+const odAnimate = document.querySelector(".project-od");
+const apigAnimate = document.querySelector(".project-apig");
 
 const animeCss = () => {
   bgAnimate.classList.add("animate");
+  odAnimate.classList.add("apparition");
+  apigAnimate.classList.add;
 };
 
 const animeJs = () => {
@@ -30,19 +34,35 @@ const animeJs = () => {
         opacity: 1,
         duration: 1000,
         easing: "easeOutExpo",
-        delay: 7000,
+        delay: 3000,
       });
-  }, 950);
+  }, 1200);
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      document.querySelector(".title-project").style.visibility = "hidden";
       animeCss();
       animeJs();
+    } else {
+      bgAnimate.classList.remove("animate");
+      document.querySelector(".title-project").style.visibility = "hidden";
     }
   });
 });
 
-observer.observe(document.querySelector("#project"));
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      textWrapper.style.visibility = "hidden";
+      setTimeout(function () {
+        animeJs(), 100;
+      });
+    }
+  });
+});
+
 observer.observe(document.querySelector(".project-background"));
+observer.observe(odAnimate);
+sectionObserver.observe(document.querySelector("#project"));
