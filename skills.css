@@ -3,29 +3,69 @@
   width: 100vw;
 }
 
+
+
 .skill-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #405c85;
-  height: 5rem;
+  box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
+  padding: 1rem 0rem;
+
+  background-color: white;
   margin-bottom: 4rem;
 }
+
+.skill-background.animate {
+  animation: backgroundSkillsTransition 3s;
+
+}
+
+
+
+.skills-title {
+  opacity: 0;
+  visibility: hidden;
+  color: black;
+  font-family: "Wallpoet", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  justify-content: center;
+    
+    
+}
+
+.skills-title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@keyframes backgroundSkillsTransition {
+  0% { 
+
+      transform: translateX(-100%);
+      
+
+  }
+
+  100% {
+
+      transform: translateX(0%);
+  }
+}
+
 
 /* ///// CSS front-skills ////  */
 
 .title-front {
   margin-top: 3rem;
   text-decoration: underline;
-  color: #fff;
+  
   /* opacity: 0; */
   /* transform: translateX(-100%); */
   /* transition: opacity 0.5s, transform 1.5s; */
 }
 
-.skills-title {
-  color: #fff;
-}
 
 .front-skills {
   display: flex;
@@ -36,14 +76,16 @@
 .skills-logo {
   display: flex;
   flex-wrap: wrap;
-  /* opacity: 0; */
-
-  gap: 4px;
-  border: solid 2px black;
-  padding: 0.5rem;
-  /* transform: translateX(100%); */
-  /* transition: opacity 0.5s, transform 1.5s; */
+  gap: 10px;
+  padding: 1rem; 
+  border-radius: 9px;
+  background: white;
+  box-shadow:  8px 8px 7px #302f31,
+             -6px -6px 7px #302f31;
 }
+
+
+
 
 /* .skills-logo-on-scroll{
         
@@ -60,8 +102,8 @@
     } */
 
 .skills-img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .animate-left {
@@ -98,10 +140,13 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  border: solid 2px rgb(255, 255, 255);
   padding: 0.5rem;
   width: 50vw;
+  background: white;
+box-shadow:  8px 8px 7px #302f31,
+             -6px -6px 7px #302f31;
 }
+
 
 .express-img {
   width: 50px;
@@ -148,9 +193,7 @@
   margin-top: 3rem;
   text-decoration: underline;
 }
-.skills-title {
-  color: #fff;
-}
+
 
 .front-skills {
   display: flex;
@@ -170,6 +213,7 @@
   gap: 4px;
   border: solid 2px rgb(255, 255, 255);
   padding: 0.5rem;
+  border-radius: 3px;
 }
 .skills-img {
   width: 50px;
@@ -189,6 +233,8 @@
   border: solid 2px rgb(255, 252, 252);
   padding: 0.5rem;
   width: 50vw;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .express-img {
@@ -224,7 +270,7 @@
 }
 
 .mysql-img {
-  width: 50px;
+  width: 50x;
   height: 50px;
   grid-column-start: 5;
   grid-column-end: 7;
