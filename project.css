@@ -1,4 +1,5 @@
 .project-background {
+    
     display : flex;
     justify-content: center;
     background-color: white;
@@ -6,15 +7,40 @@
     box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
     margin-bottom: 1em;
 
+    
+
+}
+
+.project-background.animate {
+    animation: backgroundTransition 3s;
+
+
 }
 
 .title-project  {
+    opacity: 0;
+    visibility: hidden;
     font-family: "Wallpoet", sans-serif;
     font-size: 2em;
     line-height: 1em;
     justify-content: center;
     
 }
+
+.title-project .letter {
+
+    display: inline-block;
+    line-height: 1em
+}
+
+.reset {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    /* Ajoutez d'autres propriétés CSS si nécessaire */
+  }
+  
  
 #project h3 {
     
@@ -39,6 +65,8 @@
 }
 
 .project-od {
+    visibility: hidden;
+    opacity: 0;
     height: 12rem;
     width: 90vw;
     animation: rotationLeftToRight 10s linear infinite;
@@ -46,11 +74,46 @@
     
 }
 
+.project-od.apparition {
+    visibility: visible;
+    opacity: 1;
+    transition: 5s;
+
+}
+
 .project-apig {
     height: 12rem;
     width: 90vw;
     animation: rotationRightToLeft 10s linear infinite;
 
+}
+
+@keyframes backgroundTransition {
+    0% { 
+
+        transform: translateX(-100%);
+        
+
+    }
+
+    100% {
+
+        transform: translateX(0%);
+    }
+
+    
+}
+
+@keyframes projectTransition {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @keyframes rotationLeftToRight {
