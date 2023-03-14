@@ -13,37 +13,6 @@ let array = [
 ];
 let wordIndex = 0;
 let letterIndex = 0;
-const createLetter = () => {
-  const letter = document.createElement("span");
-  target.appendChild(letter);
-  letter.style.opacity = "0";
-  letter.style.animation = "anim 5s ease forwards";
-  letter.textContent = array[wordIndex][letterIndex];
-  setTimeout(() => {
-    letter.remove();
-  }, 2000);
-};
-const loop = () => {
-  setTimeout(() => {
-    if (wordIndex >= array.length) {
-      wordIndex = 0;
-      letterIndex = 0;
-      loop();
-    } else if (letterIndex < array[wordIndex].length) {
-      createLetter();
-      letterIndex++;
-      loop();
-    } else {
-      letterIndex = 0;
-      wordIndex++;
-      setTimeout(() => {
-        loop();
-      }, 2100);
-    }
-  }, 60);
-};
-createLetter();
-loop();
 
 // Navigation
 
@@ -61,10 +30,11 @@ document.addEventListener("scroll", () => {
 
 const welcomeTitle = document.querySelector(".welcome-title");
 const homeParagraph = document.querySelector(".paragraph");
+const devText = document.querySelector(".dev-text");
 let title = "Bonjour je suis Wild";
 let paragrphe =
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tenetur culpa distinctio quaerat odit numquam atque ratione dolorem, adipisci doloribus.";
-
+let iAmWild = "Et je suis developpeur web";
 const createTitle = (word, element, index) => {
   const letter = document.createElement("span");
   letter.textContent = word[index];
@@ -73,6 +43,7 @@ const createTitle = (word, element, index) => {
 
 pIndex = 0;
 lIndex = 0;
+devtextIndex = 0;
 const titleLoop = (word, element, index) => {
   setTimeout(() => {
     if (index >= word.length) {
@@ -84,10 +55,47 @@ const titleLoop = (word, element, index) => {
     } else {
       index = 0;
     }
-  }, 60);
+  }, 40);
 };
 
 titleLoop(title, welcomeTitle, lIndex);
 setTimeout(() => {
   titleLoop(paragrphe, homeParagraph, pIndex);
-}, 2200);
+}, 2800);
+setTimeout(() => {
+  titleLoop(iAmWild, devText, devtextIndex);
+}, 1500);
+
+const createLetter = () => {
+  const letter = document.createElement("span");
+  target.appendChild(letter);
+  letter.style.opacity = "0";
+  letter.style.animation = "anim 5s ease forwards";
+  letter.textContent = array[wordIndex][letterIndex];
+  setTimeout(() => {
+    letter.remove();
+  }, 2000);
+};
+setTimeout(() => {
+  const loop = () => {
+    setTimeout(() => {
+      if (wordIndex >= array.length) {
+        wordIndex = 0;
+        letterIndex = 0;
+        loop();
+      } else if (letterIndex < array[wordIndex].length) {
+        createLetter();
+        letterIndex++;
+        loop();
+      } else {
+        letterIndex = 0;
+        wordIndex++;
+        setTimeout(() => {
+          loop();
+        }, 2100);
+      }
+    }, 60);
+  };
+  createLetter();
+  loop();
+}, 1500);
