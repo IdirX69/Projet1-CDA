@@ -74,13 +74,11 @@ const projectImgObserver = new IntersectionObserver((entries) => {
     switch (true) {
       case entry.isIntersecting:
         if (!img.classList.contains("apparition")) {
-          // La classe .apparition n'est pas encore présente, on peut l'ajouter
           img.classList.add("apparition");
           title.classList.add("apparition");
         } else {
-          // La classe .apparition est déjà présente, on doit la supprimer puis la réajouter pour relancer l'animation
           img.classList.remove("apparition");
-          void img.offsetWidth; // Force le recalcul de la mise en page pour que la transition soit jouée à nouveau
+          void img.offsetWidth;
           img.classList.add("apparition");
         }
         img.classList.remove("animation-reset");
