@@ -1,14 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Wallpoet&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  border: none;
-  text-decoration: none;
-}
+
 .contact-section {
+    font-family: Wallpoet;
     height: 100vh;
     color: white;
     padding-left: 5%;
@@ -20,7 +12,7 @@
     flex-direction: column;
     margin-top: 20px;
 }
-h2{
+.titleForm{
     font-size: 24px;
     margin-bottom: 4rem;
     text-align: center;
@@ -53,11 +45,11 @@ h2{
     height: 35px;
     margin: auto;
     background-color: #D9D9D9;
-
+font-family: wallpoet;
 }
 
 #logos {
-    margin-top: 100vh;
+    margin-top: 60vh;
     text-align: center;
 }
 
