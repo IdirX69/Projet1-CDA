@@ -38,22 +38,30 @@
     transform: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    /* Ajoutez d'autres propriétés CSS si nécessaire */
   }
   
  
 #project h3 {
-    
+    opacity: 0;
     text-align: center;
     font-size: 1,5rem;
     color: white;
-    padding : 1rem; 
+    padding : 1rem;
 
 
 }
 
+#project h3.apparition {
+    opacity: 1;
+    text-decoration: underline;
+    transition: 8s;
+}
+
 #project img {
     box-shadow: 10px 8px 11px 0px rgba(0, 0, 0, 0.47);
+    opacity: 0;
+    height: 12rem;
+    width: 90vw;
 
 }
 
@@ -64,27 +72,32 @@
     
 }
 
-.project-od {
-    visibility: hidden;
+/* .project-od {
     opacity: 0;
     height: 12rem;
     width: 90vw;
-    animation: rotationLeftToRight 10s linear infinite;
+    
 
     
-}
+} */
 
-.project-od.apparition {
-    visibility: visible;
+#project img.apparition {
     opacity: 1;
-    transition: 5s;
-
+    transition: 6s;
+    animation: rotationRightToLeft 10s linear infinite;
 }
+
+.animation-reset {
+    animation: none;
+  }
+  
+
+
 
 .project-apig {
     height: 12rem;
     width: 90vw;
-    animation: rotationRightToLeft 10s linear infinite;
+    animation: rotationLeftToRight 10s linear infinite;
 
 }
 
