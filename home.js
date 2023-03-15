@@ -99,3 +99,13 @@ setTimeout(() => {
   createLetter();
   loop();
 }, 1500);
+
+const icons = document.querySelectorAll(".social-network .fa-brands");
+icons.forEach((icon) => {
+  icon.addEventListener("mouseover", (e) => {
+    icon.style.transform = `translate(${e.offsetX - 20}px,${e.offsetY - 13}px)`;
+  });
+  icon.addEventListener("mouseleave", () => {
+    icon.style.transform = "";
+  });
+});
