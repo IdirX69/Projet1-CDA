@@ -3,36 +3,19 @@
   width: 100vw;
 }
 
-
-
 .skill-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
-  padding: 1rem 0rem;
-
-  background-color: white;
   margin-bottom: 4rem;
+  border-bottom: 1px solid aqua;
 }
-
-.skill-background.animate {
-  animation: backgroundSkillsTransition 3s;
-
-}
-
-
 
 .skills-title {
   opacity: 0;
   visibility: hidden;
-  color: black;
+  color: rgb(255, 255, 255);
   font-family: "Wallpoet", sans-serif;
-  font-size: 2em;
-  line-height: 1em;
-  justify-content: center;
-    
-    
+  font-size: 1.7em;
+  text-align: center;
+  padding: 1rem;
 }
 
 .skills-title .letter {
@@ -41,31 +24,26 @@
 }
 
 @keyframes backgroundSkillsTransition {
-  0% { 
-
-      transform: translateX(-100%);
-      
-
+  0% {
+    transform: translateX(-100%);
   }
 
   100% {
-
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
-
 
 /* ///// CSS front-skills ////  */
 
 .title-front {
   margin-top: 3rem;
-  text-decoration: underline;
-  
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  width: 30%;
   /* opacity: 0; */
   /* transform: translateX(-100%); */
   /* transition: opacity 0.5s, transform 1.5s; */
 }
-
 
 .front-skills {
   display: flex;
@@ -77,15 +55,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 1rem; 
+  padding: 1rem;
   border-radius: 9px;
-  background: white;
-  box-shadow:  8px 8px 7px #302f31,
-             -6px -6px 7px #302f31;
+  background: rgb(252, 253, 253);
+  box-shadow: 8px 8px 7px #302f31, -6px -6px 7px #302f31;
 }
-
-
-
 
 /* .skills-logo-on-scroll{
         
@@ -132,8 +106,10 @@
 
 .title-back {
   margin-top: 5rem;
-  text-decoration: underline;
-  color: #fff;
+  font-size: 1.3rem;
+  width: 30%;
+
+  color: rgb(255, 255, 255);
 }
 
 .back-logo {
@@ -143,10 +119,8 @@
   padding: 0.5rem;
   width: 50vw;
   background: white;
-box-shadow:  8px 8px 7px #302f31,
-             -6px -6px 7px #302f31;
+  box-shadow: 8px 8px 7px #302f31, -6px -6px 7px #302f31;
 }
-
 
 .express-img {
   width: 50px;
@@ -189,21 +163,10 @@ box-shadow:  8px 8px 7px #302f31,
   grid-row-end: 4;
 }
 
-.title-front {
-  margin-top: 3rem;
-  text-decoration: underline;
-}
-
-
 .front-skills {
   display: flex;
   justify-content: space-around;
   margin-bottom: 4rem;
-}
-
-.title-back {
-  margin-top: 5rem;
-  text-decoration: underline;
 }
 
 .skills-logo {
@@ -211,13 +174,14 @@ box-shadow:  8px 8px 7px #302f31,
   flex-wrap: wrap;
   width: 50vw;
   gap: 4px;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 1px aqua;
   padding: 0.5rem;
   border-radius: 3px;
 }
 .skills-img {
   width: 50px;
   height: 50px;
+  padding: 5px;
 }
 
 .back-skills {
@@ -230,10 +194,10 @@ box-shadow:  8px 8px 7px #302f31,
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  border: solid 2px rgb(255, 252, 252);
+  border: solid 1px aqua;
   padding: 0.5rem;
   width: 50vw;
-  background-color: white;
+  background: rgb(255, 255, 255);
   border-radius: 3px;
 }
 
@@ -327,4 +291,6 @@ box-shadow:  8px 8px 7px #302f31,
   grid-column-end: 7;
   grid-row-start: 3;
   grid-row-end: 4;
+}
+@media screen and (min-width: 1200px) {
 }
