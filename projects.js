@@ -10,7 +10,7 @@ const apigAnimate = document.querySelector(".project-apig");
 const animeCss = () => {
   bgAnimate.classList.add("animate");
   odAnimate.classList.add("apparition");
-  apigAnimate.classList.add;
+  apigAnimate.classList.add("animate");
 };
 
 const animeJs = () => {
@@ -63,6 +63,38 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 });
 
+const projectImgs = document.querySelectorAll("#project img");
+const projectTitle = document.querySelectorAll("#project h3");
+
+const projectImgObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const img = entry.target;
+    const title = entry.target;
+
+    switch (true) {
+      case entry.isIntersecting:
+        if (!img.classList.contains("apparition")) {
+          img.classList.add("apparition");
+          title.classList.add("apparition");
+        } else {
+          img.classList.remove("apparition");
+          void img.offsetWidth;
+          img.classList.add("apparition");
+        }
+        img.classList.remove("animation-reset");
+        break;
+      case !entry.isIntersecting:
+        img.classList.add("animation-reset");
+        break;
+    }
+  });
+});
+
+projectImgs.forEach((img) => {
+  projectImgObserver.observe(img);
+});
+projectTitle.forEach((title) => {
+  projectImgObserver.observe(title);
+});
 observer.observe(document.querySelector(".project-background"));
-observer.observe(odAnimate);
 sectionObserver.observe(document.querySelector("#project"));
