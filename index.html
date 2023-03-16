@@ -1,103 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="skills.css" />
-  <link rel="stylesheet" href="project.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#home-section">Acceuil</a></li>
-        <li>Skills</li>
-        <li>Prjets</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  </header>
-  <section class="home-section" id="home-section">
-    <div class="home-top">
-      <div class="home-paragraph">
-        <h2 class="welcome-title"></h2>
-        <br />
-        <h3 class="dev-text"></h3>
-        <br />
-        <p class="paragraph"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home-section">Acceuil</a></li>
+          <li><a href="#skill-background">Skills</a></li>
+          <li><a href="#project">Projets</a></li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home-section" id="home-section">
+      <div class="home-top">
+        <div class="home-paragraph">
+          <h2 class="welcome-title"></h2>
+          <br />
+          <h3 class="dev-text"></h3>
+          <br />
+          <p class="paragraph"></p>
+        </div>
+        <div class="home-img">
+          <img src="./images/movileavatarXL.png" alt="avatar" />
+        </div>
+        <span id="text-target"></span>
       </div>
-      <div class="home-img">
-        <img src="./images/movileavatarXL.png" alt="avatar" />
+      <div class="social-network">
+        <i
+          class="fa-brands fa-linkedin fa-2xl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover"
+        ></i>
+        <i class="fa-brands fa-github fa-2xl"></i>
+        <i class="fa-brands fa-instagram fa-2xl"></i>
+        <i class="fa-brands fa-twitter fa-2xl"></i>
+        <img src="" alt="" />
       </div>
-      <span id="text-target"></span>
-    </div>
-    <div class="social-network">
-      <i class="fa-brands fa-linkedin fa-2xl"></i>
-      <i class="fa-brands fa-github fa-2xl"></i>
-      <i class="fa-brands fa-instagram fa-2xl"></i>
-      <i class="fa-brands fa-twitter fa-2xl"></i>
-      <img src="" alt="" />
-    </div>
-  </section>
-  <section class="skills-section" id="#skills">
-    <div class="skill-background">
-      <h2 class="skills-title">My Skills</h2>
-    </div>
-
-    <div class="front-skills">
-      <p class="title-front">Front-End Developper</p>
-      <div class="skills-logo">
-        <img class="skills-img" src="./assets/Skills-images/css-3.svg" alt="test" />
-        <img class="skills-img" src="./assets/Skills-images/html-5-logo.svg" alt="test" />
-        <img class="skills-img" src="./assets/Skills-images/tailwindcss.png" alt="test" />
-        <img class="skills-img" src="./assets/Skills-images/react-2.svg" alt="test" />
-        <img class="skills-img" src="./assets/Skills-images/react-2.svg" alt="test" />
-        <img class="skills-img" src="./assets/Skills-images/javascript.svg" alt="test" />
+    </section>
+    <section class="skills-section" id="skills">
+      <div id="skill-background">
+        <h2 class="skills-title">Skills</h2>
       </div>
-      <!-- <div id="revealPoint">Reveal Point</div> -->
-    </div>
-    <div class="back-skills">
-      <p class="title-back">Back-End Developper</p>
-      <div class="back-logo">
-        <img class="express-img" src="./assets/Skills-images/express.svg" alt="test" />
-        <img class="node-img" src="./assets/Skills-images/node-js.svg" alt="test" />
-        <img class="php-img" src="./assets/Skills-images/php.svg" alt="test" />
-        <img class="postgresql-img" src="./assets/Skills-images/postgresql.svg" alt="test" />
-        <img class="mysql-img" src="./assets/Skills-images/mysq.svg" alt="test" />
+
+      <div class="div-skills front-skills">
+        <p class="title">Front-End</p>
+        <div class="skills-logo">
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/css-3.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/html-5-logo.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/tailwindcss.png"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/react-2.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/react-2.svg"
+            alt="test"
+          />
+          <img
+            class="skills-img"
+            src="./assets/Skills-images/javascript.svg"
+            alt="test"
+          />
+        </div>
+        <!-- <div id="revealPoint">Reveal Point</div> -->
       </div>
-    </div>
-    <div class="tools-skills">
-      <p class="title-back">Tools's Developper</p>
-      <div class="back-logo">
-        <img class="git-img" src="./assets/Skills-images/git.svg" alt="test" />
-        <img class="figma-img" src="./assets/Skills-images/figma.svg" alt="test" />
-        <img class="vscode-img" src="./assets/Skills-images/vscode.svg" alt="test" />
-        <img class="docker-img" src="./assets/Skills-images/docker.svg" alt="test" />
-        <img class="postman-img" src="./assets/Skills-images/postman.svg" alt="test" />
+      <div class="div-skills">
+        <p class="title">Back-End</p>
+        <div class="skills-logo">
+          <img
+            class="express-img"
+            src="./assets/Skills-images/express.svg"
+            alt="test"
+          />
+          <img
+            class="node-img"
+            src="./assets/Skills-images/node-js.svg"
+            alt="test"
+          />
+          <img
+            class="php-img"
+            src="./assets/Skills-images/php.svg"
+            alt="test"
+          />
+          <img
+            class="postgresql-img"
+            src="./assets/Skills-images/postgresql.svg"
+            alt="test"
+          />
+          <img
+            class="mysql-img"
+            src="./assets/Skills-images/mysq.svg"
+            alt="test"
+          />
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="project-section"></section>
+      <div class="div-skills">
+        <p class="title">Outils</p>
+        <div class="skills-logo">
+          <img
+            class="git-img"
+            src="./assets/Skills-images/git.svg"
+            alt="test"
+          />
+          <img
+            class="figma-img"
+            src="./assets/Skills-images/figma.svg"
+            alt="test"
+          />
+          <img
+            class="vscode-img"
+            src="./assets/Skills-images/vscode.svg"
+            alt="test"
+          />
+          <img
+            class="docker-img"
+            src="./assets/Skills-images/docker.svg"
+            alt="test"
+          />
+          <img
+            class="postman-img"
+            src="./assets/Skills-images/postman.svg"
+            alt="test"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="project" class="scroll-section">
+      <div class="project-background">
+        <h2 class="title-project">My Projects</h2>
+      </div>
+      <div class="container-project">
+        <h3 class="name-project">Origin Digital</h3>
 
-
-  <section id="project" class="scroll-section">
-    <div class="project-background">
-      <h2 class="title-project">My Projects</h2>
-    </div>
-    <div class="container-project">
-      <h3 class="name-project">Origin Digital</h3>
-
-      <div class="card-project">
-        <img class="project-od" src="/images/projet-3.png" />
+        <div class="card-project">
+          <img class="project-od" src="/images/projet-3.png" />
+        </div>
       </div>
       <div class="container-project">
         <h3 class="name-project">API Games</h3>
@@ -107,6 +177,54 @@
         </div>
       </div>
   </section>
+    <!-- /////// Modal ////// -->
+    <section class="modal">
+      <div class="modal-beforeOpen">
+        <div class="modal-content">
+          <img class="modal-image" src="/images/projet-3.png" />
+          <div class="modal-text">
+            <h3 class="modal-title">Origin Digital</h3>
+            <p class="modal-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+              nihil nisi corporis fugit enim ipsum natus accusantium odio, hic
+              quae? Laboriosam nulla delectus cumque deserunt, accusantium sint
+              eum harum culpa consequatur deleniti. Cumque iure beatae debitis
+              accusantium quisquam, illo temporibus ea delectus soluta hic
+              repellat porro nulla voluptatibus deserunt quos pariatur, incidunt
+              neque reprehenderit sed. Ipsa quo nostrum architecto, quibusdam
+              dolores quam saepe doloribus aliquam laborum odit debitis iusto
+              alias error!
+            </p>
+          </div>
+          <button type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-beforeOpen2">
+        <div class="modal-content2">
+          <img class="modal-image2" src="/images/projet-2.png" />
+          <div class="modal-text2">
+            <h3 class="modal-title2">API Games</h3>
+            <p class="modal-description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+              nihil nisi corporis fugit enim ipsum natus accusantium odio, hic
+              quae? Laboriosam nulla delectus cumque deserunt, accusantium sint
+              eum harum culpa consequatur deleniti. Cumque iure beatae debitis
+              accusantium quisquam, illo temporibus ea delectus soluta hic
+              repellat porro nulla voluptatibus deserunt quos pariatur, incidunt
+              neque reprehenderit sed. Ipsa quo nostrum architecto, quibusdam
+              dolores quam saepe doloribus aliquam laborum odit debitis iusto
+              alias error!
+            </p>
+          </div>
+          <button type="button2">
+            <i class="close2">X</i>
+          </button>
+        </div>
+      </div>
+    </section>
+
   <section class="contact-section">
     <h2 class="titleForm">Contact</h2>
     <form id="form">

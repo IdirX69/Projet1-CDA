@@ -1,144 +1,260 @@
 .project-background {
-    
-    display : flex;
-    justify-content: center;
-    background-color: white;
-    padding: 1rem 0rem;
-    box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
-    margin-bottom: 1em;
-
-    
-
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 1rem 0rem;
+  box-shadow: 8px 8px 11px 11px rgba(0.47, 0.47, 0.47, 0.47);
+  margin-bottom: 1em;
 }
 
 .project-background.animate {
-    animation: backgroundTransition 3s;
-
-
+  animation: backgroundTransition 3s;
 }
 
-.title-project  {
-    opacity: 0;
-    visibility: hidden;
-    font-family: "Wallpoet", sans-serif;
-    font-size: 2em;
-    line-height: 1em;
-    justify-content: center;
-    
+.title-project {
+  opacity: 0;
+  visibility: hidden;
+  font-family: "Wallpoet", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  justify-content: center;
 }
 
 .title-project .letter {
-
-    display: inline-block;
-    line-height: 1em
+  display: inline-block;
+  line-height: 1em;
 }
 
 .reset {
-    animation: none !important;
-    transform: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    /* Ajoutez d'autres propriétés CSS si nécessaire */
-  }
-  
- 
+  animation: none !important;
+  transform: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 #project h3 {
-    
-    text-align: center;
-    font-size: 1,5rem;
-    color: white;
-    padding : 1rem; 
+  opacity: 0;
+  text-align: center;
+  font-size: 1, 5rem;
+  color: white;
+  padding: 1rem;
+}
 
-
+#project h3.apparition {
+  opacity: 1;
+  text-decoration: underline;
+  transition: 8s;
 }
 
 #project img {
-    box-shadow: 10px 8px 11px 0px rgba(0, 0, 0, 0.47);
-
+  box-shadow: 10px 8px 11px 0px rgba(0, 0, 0, 0.47);
+  opacity: 0;
+  height: 12rem;
+  width: 90vw;
+  cursor: pointer;
 }
 
 .card-project {
-
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
-.project-od {
-    visibility: hidden;
+/* .project-od {
     opacity: 0;
     height: 12rem;
     width: 90vw;
-    animation: rotationLeftToRight 10s linear infinite;
+    
 
     
+} */
+
+#project img.apparition {
+  opacity: 1;
+  transition: 15s;
+  animation: rotationRightToLeft 10s linear infinite;
 }
 
-.project-od.apparition {
-    visibility: visible;
-    opacity: 1;
-    transition: 5s;
-
+.animation-reset {
+  animation: none;
 }
 
 .project-apig {
-    height: 12rem;
-    width: 90vw;
-    animation: rotationRightToLeft 10s linear infinite;
-
+  height: 12rem;
+  width: 90vw;
+  animation: rotationLeftToRight 10s linear infinite;
 }
 
 @keyframes backgroundTransition {
-    0% { 
+  0% {
+    transform: translateX(-100%);
+  }
 
-        transform: translateX(-100%);
-        
-
-    }
-
-    100% {
-
-        transform: translateX(0%);
-    }
-
-    
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes projectTransition {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-    }
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
 
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @keyframes rotationLeftToRight {
-    0% {
-        transform: rotate(-3deg)
-    }
-    50% {
-        transform: rotate(3deg);
-    } 
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
 
-    100% {
-        transform: rotate(-3deg)
-
-    }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 @keyframes rotationRightToLeft {
-    0% {
-        transform: rotate(3deg)
-    }
-    50% {
-        transform: rotate(-3deg);
-    } 
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
 
-    100% {
-        transform: rotate(3deg)
+  100% {
+    transform: rotate(3deg);
+  }
+}
 
-    }
+.modal-beforeOpen {
+  display: none;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.modal-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-description {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.fa-solid {
+  position: absolute;
+  color: black;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-beforeOpen2 {
+  display: none;
+}
+
+.modal-background2 {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content2 {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image2 {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.modal-text2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal-title2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-description2 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.close2 {
+  position: absolute;
+  color: black;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
