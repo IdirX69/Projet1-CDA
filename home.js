@@ -89,7 +89,7 @@ const homeParagraph = document.querySelector(".paragraph");
 const devText = document.querySelector(".dev-text");
 let title = "Bonjour je suis Wild";
 let paragrphe =
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tenetur culpa distinctio quaerat odit numquam atque ratione dolorem, adipisci doloribus.";
+  "En tant que développeur web, j'ai une passion pour la résolution de problèmes et j'aime créer des produits qui améliorent l'expérience des utilisateurs.";
 let iAmWild = "Et je suis developpeur web";
 const createTitle = (word, element, index) => {
   const letter = document.createElement("span");
