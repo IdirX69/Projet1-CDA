@@ -1,62 +1,3 @@
-// const frontTitle = document.querySelector(".title-front");
-// const frontSkillsPosition = frontTitle.getBoundingClientRect().top;
-
-// window.addEventListener("scroll", () => {
-//   const frontSkillsOffset = -300;
-
-//   if (window.pageYOffset > frontSkillsPosition + frontSkillsOffset) {
-//     frontTitle.classList.add("animate-left");
-//   } else {
-//     frontTitle.classList.remove("animate-left");
-//   }
-// });
-// const frontSkills = document.querySelector(".front-skills");
-// const frontLogo = document.querySelector(".skills-logo");
-// const frontLogoPosition = frontLogo.getBoundingClientRect().top;
-
-// window.addEventListener("scroll", () => {
-//   let frontLogoOffset = -300;
-//   if (window.pageYOffset > frontLogoPosition + frontLogoOffset) {
-//     frontLogo.classList.add("animate-right");
-//   } else {
-//     frontLogo.classList.remove("animate-right");
-//   }
-// });
-
-/* window.addEventListener("scroll", () => {
-  if (window.pageYOffset > frontLogoPosition + frontLogoOffset) {
-    frontLogo.classList.add("animate-right");
-  }
-});
- */
-/* window.addEventListener("scroll", () => {
-  if (frontLogo.getBoundingClientRect().top < window.scrollY) {
-    frontLogo.classList.add("animate-right");
-  } else {
-    frontLogo.classList.remove("animate-right");
-  }
-});
-
-const { scrollTop, clientHeight } = document.documentElement;
-
- */
-/* function scrollReveal() {
-  const revealPoint = 150;
-  var revealElement = document.querySelector(".title-front");
-  for (let i = 0; i < revealElement.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = revealElement[i].getBoundingClientRect().top;
-    if (revealTop < windowHeight - revealPoint) {
-      revealElement[i].classList.add("animate-left");
-    } else {
-      revealElement[i].classList.remove("animate-left");
-    }
-  }
-}
-
-window.addEventListener("scroll", scrollReveal);
- */
-
 // Wrap every letter in a span
 
 const skillTitleWrapper = document.querySelector(".skills-title");
@@ -106,4 +47,20 @@ const skillObserver = new IntersectionObserver((entries) => {
 });
 
 skillObserver.observe(document.querySelector(".skills-section"));
-skillObserver.observe(document.querySelector(".skill-background"));
+skillObserver.observe(document.querySelector("#skill-background"));
+
+let skillsLogos = document.querySelectorAll(".skills-logo img");
+let logoDivs = document.querySelectorAll(".skills-logo");
+
+logoDivs.forEach((div) => {
+  div.addEventListener("click", (event) => {
+    let clickedLogo = event.target;
+    clickedLogo.classList.add("remove");
+    setTimeout(() => {
+      clickedLogo.remove();
+      if (div.childElementCount <= 0) {
+        div.classList.add("remove");
+      }
+    }, 1000);
+  });
+});
