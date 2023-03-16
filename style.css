@@ -1,7 +1,6 @@
 
 .contact-section {
     font-family: Wallpoet;
-    height: 100vh;
     color: white;
     padding-left: 5%;
     margin-top: 4rem;
@@ -49,7 +48,7 @@ font-family: wallpoet;
 }
 
 #logos {
-    margin-top: 60vh;
+    margin-top: 10vh;
     text-align: center;
 }
 
