@@ -11,20 +11,37 @@
   height: 40px;
   width: 40px;
 }
-.skills-section h2 {
-  width: 100%;
+.skills-title {
   font-size: 3rem;
   font-family: "Wallpoet";
   text-align: center;
   color: white;
   padding: 1rem;
-  border-bottom: 1px solid aqua;
-  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.skills-title .letter {
+  display: inline-block;
+  line-height: 1em;
+} 
+
+.skill-background {
+  display: flex;
+  justify-content: center;
   background-color: rgba(0, 255, 255, 0.032);
+  border-bottom: 1px solid aqua;
+  background-color: rgba(0, 255, 255, 0.032);
+ 
 }
-.skills-title {
-  animation: backgroundTransition 2s;
+
+.skill-background.animate {
+  animation: backgroundTransition 3s;
 }
+
+
+
 .skills-section p {
   width: 50%;
   margin: 10px 15px;
@@ -109,8 +126,8 @@
 @media screen and (min-width: 1200px) {
   .skills-section img {
     margin: 1rem 2rem;
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
   }
   .skills-logo {
     width: 30%;

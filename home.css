@@ -151,13 +151,13 @@ a {
 }
 
 /* Media Query */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 940px) {
   .home-top {
     display: flex;
     margin-top: 5rem;
   }
   .home-img {
-    width: 100%;
+    width: auto;
     left: 65%;
     top: 15%;
   }
