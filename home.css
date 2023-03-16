@@ -61,7 +61,7 @@ h3 {
 }
 #text-target {
   color: aqua;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   position: absolute;
   top: 82.5%;
   right: 35%;
@@ -80,6 +80,7 @@ h3 {
   z-index: 10;
   transition: 1s;
 }
+
 .navigation ul {
   margin-left: 1rem;
   width: 85%;
@@ -112,6 +113,18 @@ a {
 }
 
 /* animation */
+@keyframes blow {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-0%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
 @keyframes avatar {
   0% {
     transform: translateY(0px);
@@ -193,5 +206,15 @@ a {
     width: 35%;
     left: 50%;
     font-size: 3rem;
+  }
+  em {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    background: aqua;
+
+    animation: blow 3s linear infinite;
   }
 }

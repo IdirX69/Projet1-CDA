@@ -14,6 +14,25 @@ let array = [
 let wordIndex = 0;
 let letterIndex = 0;
 
+// mouse effect
+
+document.addEventListener("mousemove", function (e) {
+  let body = document.querySelector("body");
+  let circle = document.createElement("em");
+  let x = e.x;
+  let y = e.y;
+  circle.style.left = x + -25 + "px";
+  circle.style.top = y + -55 + "px";
+
+  let size = Math.random() * 35;
+  circle.style.width = 20 + size + "px";
+  circle.style.height = 20 + size + "px";
+  body.appendChild(circle);
+  setTimeout(() => {
+    circle.remove();
+  }, 1800);
+});
+
 // Navigation
 
 let lastScrollValue = 0;
