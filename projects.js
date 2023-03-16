@@ -98,3 +98,59 @@ projectTitle.forEach((title) => {
 });
 observer.observe(document.querySelector(".project-background"));
 sectionObserver.observe(document.querySelector("#project"));
+
+/* document.addEventListener("DOMContentLoaded", function () {
+  // Récupération des éléments HTML
+  const modalBackground = document.querySelector(".modal-background");
+  const modalContent = document.querySelector(".modal-content");
+  const modalImage = document.querySelector(".modal-image");
+  const modalTitle = document.querySelector(".modal-title");
+  const modalDescription = document.querySelector(".modal-description");
+  const modalCloseButton = document.querySelector(".modal-close");
+  const imageToOpenModal = document.querySelector(".project-od");
+
+  // Fonction pour ouvrir la modale
+  function openModal(imageSrc, title, description) {
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalBackground.style.display = "flex";
+  }
+
+  // Fonction pour fermer la modale
+  function closeModal() {
+    modalBackground.style.display = "none";
+  }
+
+  // Ajout d'un événement de clic sur l'image pour ouvrir la modale
+  imageToOpenModal.addEventListener("click", function () {
+    openModal(
+      "/images/projet-3.png",
+      "Origin Digital",
+      "Description du projet Origin Digital"
+    );
+  });
+
+  // Ajout d'un événement au bouton de fermeture
+  modalCloseButton.addEventListener("click", closeModal);
+});
+ */
+
+const modalBackground = document.querySelector(".modal-background");
+const beforeModal = document.querySelector(".modal-beforeOpen");
+const modalContent = document.querySelector(".modal-content");
+const modalImage = document.querySelector(".project-od");
+const modalTitle = document.querySelector(".modal-title");
+const modalDescription = document.querySelector(".modal-description");
+const modalCloseButton = document.querySelector(".fa-solid");
+const imageToOpenModal = document.querySelector(".project-od");
+
+modalImage.addEventListener("click", () => {
+  beforeModal.classList.remove("modal-beforeOpen");
+  beforeModal.classList.add("modal-background");
+});
+
+modalCloseButton.addEventListener("click", () => {
+  beforeModal.classList.add("modal-beforeOpen");
+  beforeModal.classList.remove("modal-background");
+});
