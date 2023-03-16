@@ -99,42 +99,7 @@ projectTitle.forEach((title) => {
 observer.observe(document.querySelector(".project-background"));
 sectionObserver.observe(document.querySelector("#project"));
 
-/* document.addEventListener("DOMContentLoaded", function () {
-  // Récupération des éléments HTML
-  const modalBackground = document.querySelector(".modal-background");
-  const modalContent = document.querySelector(".modal-content");
-  const modalImage = document.querySelector(".modal-image");
-  const modalTitle = document.querySelector(".modal-title");
-  const modalDescription = document.querySelector(".modal-description");
-  const modalCloseButton = document.querySelector(".modal-close");
-  const imageToOpenModal = document.querySelector(".project-od");
-
-  // Fonction pour ouvrir la modale
-  function openModal(imageSrc, title, description) {
-    modalImage.src = imageSrc;
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-    modalBackground.style.display = "flex";
-  }
-
-  // Fonction pour fermer la modale
-  function closeModal() {
-    modalBackground.style.display = "none";
-  }
-
-  // Ajout d'un événement de clic sur l'image pour ouvrir la modale
-  imageToOpenModal.addEventListener("click", function () {
-    openModal(
-      "/images/projet-3.png",
-      "Origin Digital",
-      "Description du projet Origin Digital"
-    );
-  });
-
-  // Ajout d'un événement au bouton de fermeture
-  modalCloseButton.addEventListener("click", closeModal);
-});
- */
+//////// PREMIERE MODALE IMG ////////////////
 
 const modalBackground = document.querySelector(".modal-background");
 const beforeModal = document.querySelector(".modal-beforeOpen");
@@ -153,4 +118,24 @@ modalImage.addEventListener("click", () => {
 modalCloseButton.addEventListener("click", () => {
   beforeModal.classList.add("modal-beforeOpen");
   beforeModal.classList.remove("modal-background");
+});
+
+//////// DEUXIEME MODALE IMG ////////////////
+
+const modalBackground2 = document.querySelector(".modal-background2");
+const beforeModal2 = document.querySelector(".modal-beforeOpen2");
+const modalContent2 = document.querySelector(".modal-content2");
+const modalImageDeux2 = document.querySelector(".project-apig");
+const modalTitle2 = document.querySelector(".modal-title");
+const modalDescription2 = document.querySelector(".modal-description2");
+const modalCloseButton2 = document.querySelector(".close2");
+
+modalImageDeux2.addEventListener("click", () => {
+  beforeModal2.classList.remove("modal-beforeOpen2");
+  beforeModal2.classList.add("modal-background2");
+});
+
+modalCloseButton2.addEventListener("click", () => {
+  beforeModal2.classList.add("modal-beforeOpen2");
+  beforeModal2.classList.remove("modal-background2");
 });
