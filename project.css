@@ -1,3 +1,6 @@
+#projects {
+  height: 100vh;
+}
 .project-background {
   display: flex;
   justify-content: center;
@@ -5,14 +8,11 @@
   border-bottom: 1px solid aqua;
   background-color: rgba(0, 255, 255, 0.032);
   margin-bottom: 3rem;
- 
 }
 
 .project-background.animate {
   animation: backgroundTransition 3s;
 }
-
-
 
 .title-project {
   font-size: 3rem;
@@ -46,15 +46,13 @@
 
 #project h3.apparition {
   opacity: 1;
-  
+
   transition: 8s;
 }
 
 #project h3.apparition:hover {
-
   text-decoration-line: underline;
   text-decoration-color: aqua;
-  
 }
 
 .project-od:hover {
@@ -73,6 +71,18 @@
   display: flex;
   justify-content: center;
 }
+.modal-description button {
+  padding: 0.7rem;
+  background-color: aqua;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.modal-description2 button {
+  padding: 0.7rem;
+  background-color: aqua;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
 
 /* .project-od {
     opacity: 0;
@@ -85,8 +95,8 @@
 
 #project img.apparition {
   opacity: 1;
-  transition: 15s;
-  animation: rotationRightToLeft 10s linear infinite;
+  transition: 0.5s;
+  animation: rotationRightToLeft 8s linear infinite;
 }
 
 .animation-reset {
@@ -274,25 +284,20 @@
   cursor: pointer;
 }
 
-
-
 /* ////////// RESPONSIVE DESKTOP //////// */
 
-
 @media screen and (min-width: 940px) {
-
   .project-background {
     margin-bottom: 5rem;
   }
 
   #project img {
-    width : 50vw;
-    height : 29rem;
+    width: 50vw;
+    height: 29rem;
   }
 
-  .title-project{
+  .title-project {
     font-size: 5rem;
-    
   }
 
   #project h3 {
@@ -300,9 +305,7 @@
     margin: 5rem;
   }
 
-  
   .project-od:hover {
-    transform: scale(1,4);
+    transform: scale(1, 4);
   }
-  
 }
