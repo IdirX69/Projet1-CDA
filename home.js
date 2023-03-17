@@ -47,9 +47,8 @@ setTimeout(() => {
       }
     }, 40);
   };
-  createLetter();
   loop();
-}, 1500);
+}, 10000);
 
 // mouse effect
 
@@ -114,13 +113,13 @@ const titleLoop = (word, element, index) => {
   }, 40);
 };
 
-titleLoop(title, welcomeTitle, lIndex);
-setTimeout(() => {
-  titleLoop(paragrphe, homeParagraph, pIndex);
-}, 2800);
 setTimeout(() => {
   titleLoop(iAmWild, devText, devtextIndex);
 }, 1500);
+titleLoop(title, welcomeTitle, lIndex);
+setTimeout(() => {
+  titleLoop(paragrphe, homeParagraph, pIndex);
+}, 3000);
 
 const icons = document.querySelectorAll(".social-network .fa-brands");
 icons.forEach((icon) => {
