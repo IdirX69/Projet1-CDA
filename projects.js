@@ -43,11 +43,13 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.querySelector(".title-project").style.visibility = "hidden";
+      textWrapper.style.opacity = "0";
       animeCss();
       animeJs();
     } else {
       bgAnimate.classList.remove("animate");
       document.querySelector(".title-project").style.visibility = "hidden";
+      textWrapper.style.opacity = "0";
     }
   });
 });
