@@ -58,8 +58,8 @@ document.addEventListener("mousemove", (e) => {
   let circle = document.createElement("em");
   let x = e.x;
   let y = e.y;
-  circle.style.left = x + 15 + "px";
-  circle.style.top = y + -60 + "px";
+  circle.style.left = x + 25 + "px";
+  circle.style.top = y + 70 + "px";
 
   let size = Math.random() * 50;
   circle.style.width = 10 + size + "px";
