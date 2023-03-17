@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 body {
-  font-family:"Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: rgb(60, 73, 77);
 }
 
@@ -61,11 +61,11 @@ h3 {
 }
 #text-target {
   color: aqua;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: absolute;
   top: 82.5%;
-  right: 35%;
-  width: 30%;
+  right: 20%;
+  width: 60%;
   font-family: "Wallpoet";
 }
 
@@ -120,7 +120,7 @@ a {
     filter: hue-rotate(0deg);
   }
   100% {
-    transform: translate(-0%, -1000%);
+    transform: translate(0%, -800%);
     opacity: 0;
     filter: hue-rotate(720deg);
   }
@@ -208,8 +208,6 @@ a {
     font-size: 4.5rem;
   }
   em {
-    height: 15px;
-    width: 15px;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;

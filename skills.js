@@ -48,19 +48,3 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillObserver.observe(document.querySelector(".skills-section"));
 skillObserver.observe(document.querySelector("#skill-background"));
-
-let skillsLogos = document.querySelectorAll(".skills-logo img");
-let logoDivs = document.querySelectorAll(".skills-logo");
-
-logoDivs.forEach((div) => {
-  div.addEventListener("click", (event) => {
-    let clickedLogo = event.target;
-    clickedLogo.classList.add("remove");
-    setTimeout(() => {
-      clickedLogo.remove();
-      if (div.childElementCount <= 0) {
-        div.classList.add("remove");
-      }
-    }, 1000);
-  });
-});

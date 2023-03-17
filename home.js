@@ -53,17 +53,17 @@ setTimeout(() => {
 
 // mouse effect
 
-document.addEventListener("mousemove", function (e) {
+document.addEventListener("mousemove", (e) => {
   let body = document.querySelector("body");
   let circle = document.createElement("em");
   let x = e.x;
   let y = e.y;
-  circle.style.left = x + -25 + "px";
-  circle.style.top = y + -55 + "px";
+  circle.style.left = x + 15 + "px";
+  circle.style.top = y + -60 + "px";
 
-  let size = Math.random() * 35;
-  circle.style.width = 20 + size + "px";
-  circle.style.height = 20 + size + "px";
+  let size = Math.random() * 50;
+  circle.style.width = 10 + size + "px";
+  circle.style.height = 10 + size + "px";
   body.appendChild(circle);
   setTimeout(() => {
     circle.remove();
