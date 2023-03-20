@@ -260,27 +260,33 @@
     </section>
 
     <section class="contact-section" id="contact">
-      <h2 class="titleForm">Contact</h2>
-      <form id="form">
-        <div id="from">
+      <div class="container-title-contact">
+        <h2 class="titleForm">Contact</h2>
+      </div>
+      <div class="form">
+        <div class="name-area">
           <label for="name">Nom <sup>*</sup></label>
-          <input type="text" id="name" name="name" />
+          <input type="text" class="name-input" id="name" name="name" />
         </div>
 
-        <div id="reply">
+        <div class="email-area">
           <label for="email">E-Mail <sup>*</sup></label>
-          <input type="email" id="email" name="email" />
+          <input type="email" class="email-input" id="email" name="email" />
         </div>
 
-        <div id="message">
-          <label for="msg" cols="30" rows="1">Message</label>
-          <textarea id="msg" name="user_message"></textarea>
+        <div class="message-area">
+          <label for="msg">Message</label>
+          <textarea
+            id="msg"
+            class="user-message"
+            name="user_message"
+          ></textarea>
         </div>
-
-        <div class="button">
-          <button type="submit">Envoyer</button>
+        <div class="placeButtonSubmit">
+          <button class="submit-button" type="submit">Envoyer</button>
         </div>
-      </form>
+      </div>
+      <p id="message-error"></p>
 
       <div id="logos">
         <img src="./images/Rectangle 24.png" alt="logo Linkedin " />
@@ -292,10 +298,10 @@
     </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="index.js"></script>
     <script src="home.js"></script>
     <script src="skills.js"></script>
     <script src="projects.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
 .

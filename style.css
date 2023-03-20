@@ -1,51 +1,79 @@
 .contact-section {
   font-family: Wallpoet;
   color: white;
-  padding-left: 5%;
   margin-top: 4rem;
+}
+.form {
+  padding-left: 1.5rem;
 }
 sup {
   color: #ea1212;
 }
-.contact-section > form div {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
 .titleForm {
   font-size: 24px;
-  margin-bottom: 4rem;
   text-align: center;
 }
-.contact-section [name="name"] {
-  color: white;
-  width: 105px;
-  border-bottom: 1px solid white;
-  background-color: #37494e;
+
+.container-title-contact {
+  border-bottom: solid 1px aqua;
+  margin-bottom: 3rem;
 }
 
-.contact-section [name="email"] {
-  color: white;
-  width: 137px;
-  border-bottom: 1px solid white;
-  background-color: #37494e;
+.name-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
-
-.contact-section [name="user_message"] {
+#name {
   color: white;
-  width: 279.5px;
-  height: 70px;
+  width: 12rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
   border-bottom: 1px solid white;
-  background-color: #37494e;
+  background-color: rgba(0, 255, 255, 0.032);
 }
-
-[type="submit"] {
+.email-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+#email {
+  color: white;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 255, 255, 0.032);
+}
+.message-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+#msg {
+  color: white;
+  width: 22rem;
+  height: 5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 255, 255, 0.032);
+}
+.placeButtonSubmit {
+  display: flex;
+  justify-content: center;
+}
+.submit-button {
   text-align: center;
   width: 122px;
   height: 35px;
   margin: auto;
   background-color: #d9d9d9;
   font-family: "wallpoet";
+  margin-bottom: 1rem;
+}
+
+#message-error {
+  color: #ea1212;
 }
 
 #logos {

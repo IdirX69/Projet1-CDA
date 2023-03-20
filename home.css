@@ -75,7 +75,7 @@ h3 {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: rgb(60, 73, 77);
+  background-color: rgb(58, 67, 69);
   border-bottom: 1px solid aqua;
   z-index: 10;
   transition: 1s;
@@ -118,7 +118,7 @@ a {
   bottom: 0.5rem;
   opacity: 0.5;
   transition: opacity 5s;
-  animation: buttonTop 3.5s linear infinite alternate;
+  animation: buttonTop 3s linear infinite alternate;
   color: white;
   padding: 1em;
   margin: 10px;
