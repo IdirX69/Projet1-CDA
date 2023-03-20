@@ -84,6 +84,13 @@
   margin-top: 1rem;
 }
 
+.modal-description3 button {
+  padding: 0.7rem;
+  background-color: aqua;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
 /* .project-od {
     opacity: 0;
     height: 12rem;
@@ -95,7 +102,7 @@
 
 #project img.apparition {
   opacity: 1;
-  transition: 0.5s;
+  transition: 2s;
   animation: rotationRightToLeft 8s linear infinite;
 }
 
@@ -274,6 +281,69 @@
 }
 
 .close2 {
+  position: absolute;
+  color: black;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-beforeOpen3 {
+  display: none;
+}
+
+.modal-background3 {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content3 {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image3 {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.modal-text3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal-title3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-description3 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.close3 {
   position: absolute;
   color: black;
   top: 10px;

@@ -46,7 +46,7 @@ h3 {
 }
 .home-img img {
   height: 280px;
-  border-radius: 140px;
+  border-radius: 360px;
   animation: avatar linear 3.5s infinite alternate;
   right: 15%;
 }
@@ -112,7 +112,42 @@ a {
   transition: 1.1s ease-out;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 5s;
+  animation: buttonTop 3.5s linear infinite alternate;
+  color: white;
+  padding: 1em;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.3rem;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
 /* animation */
+
+@keyframes buttonTop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
 @keyframes blow {
   0% {
     transform: translate(-50%, -50%);
