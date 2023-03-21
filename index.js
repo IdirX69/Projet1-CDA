@@ -19,39 +19,19 @@ const goToTop = () => {
 
 backToTopButton.addEventListener("click", goToTop);
 
-/* const form = document.querySelector("#form");
+function createBusinessCard() {
+  const nameValue = document.querySelector(".name-input").value;
+  const emailValue = document.querySelector(".email-input").value;
+  const messageValue = document.querySelector(".user-message").value;
 
-// Récupérer la valeur des champs nom et email
-const nom = document.querySelector("#name");
-const email = document.querySelector("#email");
-const Messg = document.querySelector("#msg");
+  const businessCard = document.querySelector(".business-card");
+  businessCard.querySelector(".welcome-user").textContent = nameValue;
 
-form.onsubmit = function (event) {
-  event.preventDefault();
+  businessCard.querySelector(".email").textContent = emailValue;
+  businessCard.querySelector(".message").textContent = messageValue;
 
-  // Contrôle sur le nom
-  if (nom.value === "") {
-    nom.style.backgroundColor = "#a50f0f";
-  } else {
-    nom.style.backgroundColor = "#096024";
-  }
-
-  // Contrôle sur l'email
-  if (email.value === "") {
-    email.style.backgroundColor = "#a50f0f";
-    return false;
-  } else {
-    email.style.backgroundColor = "#096024";
-  }
-  form.addEventListener("submit", () => {
-    email.value = "";
-    email.style.backgroundColor = "";
-    nom.value = "";
-    nom.style.backgroundColor = "";
-    Messg.value = "";
-  });
-};
- */
+  businessCard.style.display = "flex";
+}
 const submitButton = document.querySelector(".submit-button");
 const messageEmpty = document.querySelector("#message-error");
 
@@ -64,26 +44,63 @@ submitButton.addEventListener("click", (e) => {
   const messageValue = document.querySelector(".user-message").value;
   const messageInput = document.querySelector(".user-message");
 
-  switch (true) {
-    case emailValue === "" && nameValue === "" && messageValue === "":
-      emailInput.style.backgroundColor = "#ea1212";
-      nameInput.style.backgroundColor = "#ea1212";
-      messageInput.style.backgroundColor = "#ea1212";
+  if (emailValue !== "") {
+    emailInput.style.backgroundColor = "rgba(0, 255, 255, 0.032)";
+  }
 
-      messageEmpty.innerHTML = "Veuillez remplir tous les champs";
-      break;
-    case nameValue === "":
-      messageEmpty.innerHTML = "Veuillez renseigner votre nom";
-      break;
-    case emailValue === "":
-      messageEmpty.innerHTML = "Veuillez renseigner une adresse email";
-      break;
-    case messageValue === "":
-      messageInput.style.backgroundColor = "#ea1212";
-      messageEmpty.innerHTML = "Veuillez insérer un message";
-      break;
-    case (messageInput.style.backgroundColor = "#ea1212" && !emailValue):
-      messageInput.style.backgroundColor = "";
-      break;
+  if (nameValue !== "") {
+    nameInput.style.backgroundColor = "rgba(0, 255, 255, 0.032)";
+  }
+
+  if (messageValue !== "") {
+    messageInput.style.backgroundColor = "rgba(0, 255, 255, 0.032)";
+  }
+
+  if (emailValue !== "" && nameValue !== "" && messageValue !== "") {
+    createBusinessCard();
+    emailInput.value = "";
+    nameInput.value = "";
+    messageInput.value = "";
+    messageEmpty.innerHTML = "";
+  } else {
+    switch (true) {
+      case emailValue === "" && nameValue === "" && messageValue === "":
+        emailInput.style.backgroundColor = "#ea1212";
+        nameInput.style.backgroundColor = "#ea1212";
+        messageInput.style.backgroundColor = "#ea1212";
+
+        messageEmpty.innerHTML = "Veuillez remplir tous les champs";
+        break;
+      case emailValue === "" && nameValue === "":
+        emailInput.style.backgroundColor = "#ea1212";
+        nameInput.style.backgroundColor = "#ea1212";
+
+        messageEmpty.innerHTML = "Veuillez remplir les champs manquants";
+        break;
+      case emailValue === "" && messageValue === "":
+        emailInput.style.backgroundColor = "#ea1212";
+        messageInput.style.backgroundColor = "#ea1212";
+
+        messageEmpty.innerHTML = "Veuillez remplir les champs manquants";
+        break;
+      case nameValue === "" && messageValue === "":
+        nameInput.style.backgroundColor = "#ea1212";
+        messageInput.style.backgroundColor = "#ea1212";
+
+        messageEmpty.innerHTML = "Veuillez remplir tous les champs";
+        break;
+      case nameValue === "":
+        messageEmpty.innerHTML = "Veuillez renseigner votre nom";
+        break;
+      case emailValue === "":
+        emailInput.style.backgroundColor = "#ea1212";
+
+        messageEmpty.innerHTML = "Veuillez renseigner une adresse email";
+        break;
+      case messageValue === "":
+        messageInput.style.backgroundColor = "#ea1212";
+        messageEmpty.innerHTML = "Veuillez insérer un message";
+        break;
+    }
   }
 });
