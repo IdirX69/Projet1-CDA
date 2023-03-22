@@ -18,6 +18,7 @@ const goToTop = () => {
 };
 
 backToTopButton.addEventListener("click", goToTop);
+const form = document.querySelector(".form");
 
 function createBusinessCard() {
   const nameValue = document.querySelector(".name-input").value;
@@ -25,13 +26,23 @@ function createBusinessCard() {
   const messageValue = document.querySelector(".user-message").value;
 
   const businessCard = document.querySelector(".business-card");
-  businessCard.querySelector(".welcome-user").textContent = nameValue;
+  const businessCardContent = businessCard.querySelector(
+    ".business-card-content"
+  );
+  businessCardContent.querySelector(".welcome-user").textContent = nameValue;
 
-  businessCard.querySelector(".email").textContent = emailValue;
-  businessCard.querySelector(".message").textContent = messageValue;
+  businessCardContent.querySelector(".email").textContent = emailValue;
+  businessCardContent.querySelector(".message").textContent = messageValue;
 
   businessCard.style.display = "flex";
+  businessCard.classList.add("rotated");
+
+  // Afficher le contenu de la carte à la fin de l'animation
+  setTimeout(() => {
+    businessCardContent.style.display = "block";
+  }, 1000);
 }
+
 const submitButton = document.querySelector(".submit-button");
 const messageEmpty = document.querySelector("#message-error");
 
@@ -57,16 +68,21 @@ submitButton.addEventListener("click", (e) => {
   }
 
   if (emailValue !== "" && nameValue !== "" && messageValue !== "") {
+    form.style.display = "none";
+    submitButton.style.display = "none";
     createBusinessCard();
     emailInput.value = "";
     nameInput.value = "";
     messageInput.value = "";
     messageEmpty.innerHTML = "";
   } else {
+    // Si un ou plusieurs composants ne sont pas remplis ont effectue ces vérifications
+
     switch (true) {
       case emailValue === "" && nameValue === "" && messageValue === "":
-        emailInput.style.backgroundColor = "#ea1212";
         nameInput.style.backgroundColor = "#ea1212";
+        emailInput.style.backgroundColor = "#ea1212";
+
         messageInput.style.backgroundColor = "#ea1212";
 
         messageEmpty.innerHTML = "Veuillez remplir tous les champs";

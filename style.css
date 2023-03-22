@@ -72,11 +72,15 @@ sup {
   margin-bottom: 1rem;
 }
 
+.submit-button:hover {
+  background-color: aqua;
+}
+.message-error-container {
+  display: flex;
+  justify-content: center;
+}
 #message-error {
   color: #ea1212;
-}
-
-.business-card {
 }
 
 #logos {
@@ -86,4 +90,75 @@ sup {
 
 #logos img {
   margin-right: 25px;
+}
+
+.business-card-container {
+  display: flex;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 3rem;
+}
+.business-card {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 90vw;
+  height: 100%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card-face {
+  width: 90vw;
+  height: auto;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background-color: rgba(0, 255, 255, 0.1);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: rgba(0, 255, 255, 0.1);
+  padding: 20px;
+}
+
+.business-card.rotated .card-back {
+  animation: rotate 1.3s ease-in-out forwards;
+}
+
+.bonjour-card {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-user {
+  font-size: 2rem;
+  color: aqua;
+}
+
+.email-card {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.email {
+  text-decoration: none;
+}
+
+.message {
+  margin-top: 1rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }

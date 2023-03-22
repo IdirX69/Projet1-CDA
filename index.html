@@ -13,9 +13,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="skills.css" />
     <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
     <div class="cursor"></div>
@@ -286,21 +287,33 @@
           <button class="submit-button" type="submit">Envoyer</button>
         </div>
       </form>
-      <div class="business-card">
-        <p>Bonjour <span class="welcome-user"></span></p>
+      <div class="message-error-container">
 
-        <p>E-mail : <span class="email"></span></p>
-
-        <p>Votre message : <span class="message"></span></p>
+        <p id="message-error"></p>
       </div>
-
-      <p id="message-error"></p>
-
-      <div id="logos">
-        <img src="./images/Rectangle 24.png" alt="logo Linkedin " />
-        <img src="./images/Rectangle 25.png" alt="logo github " />
+      <div class="business-card-container">
+        <div class="business-card">
+          <div class="card-face card-front"></div>
+          <div class="card-face card-back">
+            <div class="business-card-content">
+              <p class="bonjour-card">
+                Bonjour <span class="welcome-user"></span>, bienvenue sur mon portfolio !
+              </p>
+              <span><p class="email-card">E-mail : <span class="email"></span></p>
+              <p class="message-card">
+                J'ai bien reçu votre message : <br />"<span
+                  class="message"
+                ></span
+                >". 
+                <br />
+                Je vous recontacterai dans les plus brefs délais
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="footer"></section>
     <button class="back-to-top">
       <img class="back-to-top-img" src="images/chevron-double-up.svg" />
     </button>
