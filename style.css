@@ -92,6 +92,8 @@ sup {
   margin-right: 25px;
 }
 
+/*  ////////////   USER CARD  /////////// */
+
 .business-card-container {
   display: flex;
   justify-content: center;
@@ -99,6 +101,7 @@ sup {
   margin-bottom: 3rem;
 }
 .business-card {
+  display: none;
   background-color: transparent;
   border-radius: 10px;
   width: 90vw;
@@ -131,9 +134,11 @@ sup {
 .business-card.rotated .card-back {
   animation: rotate 1.3s ease-in-out forwards;
 }
-
+.business-card-content {
+  opacity: 0;
+}
 .bonjour-card {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
@@ -160,5 +165,52 @@ sup {
   }
   to {
     transform: rotateY(360deg);
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  .card-back-container {
+    display: flex;
+    justify-content: center;
+  }
+  .business-card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .form {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .business-card {
+    width: 80%;
+  }
+
+  .business-card.rotated {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-face {
+    width: 100%;
+  }
+  .bonjour-card {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .email-card {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+  }
+  .message-card {
+    font-size: 1.3rem;
   }
 }

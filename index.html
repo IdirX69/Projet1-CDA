@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="footer.css" />
   </head>
+  <div id="circle-container"></div>
   <body>
     <div class="cursor"></div>
     <header>
@@ -44,6 +45,7 @@
         </div>
         <span id="text-target"></span>
       </div>
+      <div class="social-container">
       <div class="social-network">
         <a href="https://www.linkedin.com/feed/"
           ><i class="fa-brands fa-linkedin fa-2xl"></i
@@ -58,6 +60,7 @@
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </a>
       </div>
+    </div>
     </section>
     <section class="skills-section" id="skills">
       <div class="skill-background">
@@ -264,6 +267,7 @@
       <div class="container-title-contact">
         <h2 class="titleForm">Contact</h2>
       </div>
+      <div class="form-container">
       <form type="submit" class="form">
         <div class="name-area">
           <label for="name">Nom <sup>*</sup></label>
@@ -287,13 +291,16 @@
           <button class="submit-button" type="submit">Envoyer</button>
         </div>
       </form>
+    </div>
       <div class="message-error-container">
 
         <p id="message-error"></p>
       </div>
-      <div class="business-card-container">
+
+           <div class="business-card-container">
         <div class="business-card">
           <div class="card-face card-front"></div>
+          <div class="card-back-container">
           <div class="card-face card-back">
             <div class="business-card-content">
               <p class="bonjour-card">
@@ -312,6 +319,7 @@
           </div>
         </div>
       </div>
+      </div> 
     </section>
     <section class="footer"></section>
     <button class="back-to-top">

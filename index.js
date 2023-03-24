@@ -29,18 +29,26 @@ function createBusinessCard() {
   const businessCardContent = businessCard.querySelector(
     ".business-card-content"
   );
-  businessCardContent.querySelector(".welcome-user").textContent = nameValue;
+  const contentCard = () => {
+    businessCardContent.querySelector(".welcome-user").textContent = nameValue;
 
-  businessCardContent.querySelector(".email").textContent = emailValue;
-  businessCardContent.querySelector(".message").textContent = messageValue;
+    businessCardContent.querySelector(".email").textContent = emailValue;
+    businessCardContent.querySelector(".message").textContent = messageValue;
 
-  businessCard.style.display = "flex";
-  businessCard.classList.add("rotated");
+    businessCard.style.display = "flex";
+  };
+  contentCard();
 
-  // Afficher le contenu de la carte à la fin de l'animation
+  // J'affiche le contenu de la carte à la fin de l'animation
+
   setTimeout(() => {
+    businessCard.classList.add("rotated");
     businessCardContent.style.display = "block";
-  }, 1000);
+  }, 500);
+  setTimeout(() => {
+    businessCardContent.style.opacity = "1";
+    businessCardContent.style.transition = "2s";
+  }, 2000);
 }
 
 const submitButton = document.querySelector(".submit-button");
@@ -50,8 +58,10 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   const emailValue = document.querySelector(".email-input").value;
   const emailInput = document.querySelector(".email-input");
+
   const nameValue = document.querySelector(".name-input").value;
   const nameInput = document.querySelector(".name-input");
+
   const messageValue = document.querySelector(".user-message").value;
   const messageInput = document.querySelector(".user-message");
 
