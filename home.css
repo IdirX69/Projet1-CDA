@@ -21,6 +21,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(60, 73, 77);
+  margin-bottom: 0px;
 }
 
 .home-section h2 {
@@ -44,14 +45,14 @@ h3 {
   width: 100%;
   color: white;
   line-height: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .home-img {
   margin-bottom: 3rem;
   position: absolute;
-  bottom: 15%;
-  left: 16%;
+  bottom: 20%;
+  left: 18%;
 }
 .home-img img {
   height: 280px;
@@ -68,12 +69,17 @@ h3 {
   filter: blur(0.8px);
   cursor: pointer;
 }
+
+.text-target-container {
+  display: flex;
+  justify-content: center;
+}
 #text-target {
   color: aqua;
   font-size: 1.5rem;
   position: absolute;
   top: 82.5%;
-  right: 20%;
+  left: 28%;
   width: 60%;
   font-family: "Wallpoet";
 }
@@ -102,6 +108,7 @@ h3 {
   display: flex;
   align-items: center;
 }
+
 a {
   color: white;
 }
@@ -255,6 +262,10 @@ a {
   .navigation li {
     height: 80px;
     font-size: 1.6rem;
+  }
+  a:hover {
+    color: aqua;
+    transform: scale(1.2);
   }
   #text-target {
     width: 50%;
