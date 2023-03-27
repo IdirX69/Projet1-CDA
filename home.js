@@ -48,22 +48,23 @@ setTimeout(() => {
     }, 40);
   };
   loop();
-}, 10000);
+}, 13000);
 
 // mouse effect
 
 document.addEventListener("mousemove", (e) => {
-  let body = document.querySelector("body");
+  let container = document.getElementById("circle-container");
   let circle = document.createElement("em");
   let x = e.x;
   let y = e.y;
   circle.style.left = x + 25 + "px";
   circle.style.top = y + 70 + "px";
+  circle.style.zIndex = 1000;
 
   let size = Math.random() * 50;
   circle.style.width = 10 + size + "px";
   circle.style.height = 10 + size + "px";
-  body.appendChild(circle);
+  container.appendChild(circle);
   setTimeout(() => {
     circle.remove();
   }, 1800);
@@ -86,10 +87,10 @@ document.addEventListener("scroll", () => {
 const welcomeTitle = document.querySelector(".welcome-title");
 const homeParagraph = document.querySelector(".paragraph");
 const devText = document.querySelector(".dev-text");
-let title = "Bonjour je suis Wild";
+let title = "Bonjour, je m'appelle Wild";
 let paragrphe =
-  "En tant que développeur web, j'ai une passion pour la résolution de problèmes et j'aime créer des produits qui améliorent l'expérience des utilisateurs.";
-let iAmWild = "Et je suis developpeur web";
+  "En tant que développeur web passionné, mon objectif est de fournir des solutions créatives et efficaces, en tenant compte des besoins et des attentes des utilisateurs, pour rendre leur navigation sur le web plus agréable et fluide.";
+let iAmWild = "Je suis developpeur web fullstack";
 const createTitle = (word, element, index) => {
   const letter = document.createElement("span");
   letter.textContent = word[index];
