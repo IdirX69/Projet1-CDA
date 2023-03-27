@@ -13,10 +13,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="skills.css" />
     <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
+  <div id="circle-container"></div>
   <body>
     <div class="cursor"></div>
     <header>
@@ -41,8 +43,11 @@
         <div class="home-img">
           <img src="./images/movileavatarXL.png" alt="avatar" />
         </div>
+        <div class="text-target-container">
         <span id="text-target"></span>
       </div>
+      </div>
+      <div class="social-container">
       <div class="social-network">
         <a href="https://www.linkedin.com/feed/"
           ><i class="fa-brands fa-linkedin fa-2xl"></i
@@ -57,13 +62,14 @@
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </a>
       </div>
+    </div>
     </section>
     <section class="skills-section" id="skills">
       <div class="skill-background">
         <h2 class="skills-title">Skills</h2>
       </div>
 
-      <div class="div-skills front-skills">
+      <div class="front-skills">
         <p class="title">Front-End</p>
         <div class="skills-logo">
           <img
@@ -99,7 +105,7 @@
         </div>
         <!-- <div id="revealPoint">Reveal Point</div> -->
       </div>
-      <div class="div-skills">
+      <div class="back-skills">
         <p class="title">Back-End</p>
         <div class="skills-logo">
           <img
@@ -129,7 +135,7 @@
           />
         </div>
       </div>
-      <div class="div-skills">
+      <div class="tools-skills">
         <p class="title">Outils</p>
         <div class="skills-logo">
           <img
@@ -165,7 +171,7 @@
         <h2 class="title-project">Projects</h2>
       </div>
       <div class="container-project">
-        <h3 class="name-project">Origin Digital</h3>
+        <h3 class="name-project">Origins Digital</h3>
 
         <div class="card-project">
           <img class="project-od" src="/images/projet-3.png" />
@@ -176,6 +182,16 @@
 
         <div class="card-project">
           <img class="project-apig" src="/images/projet-2.png" />
+        </div>
+      </div>
+      <div class="container-project">
+        <h3 class="name-project">Enedis</h3>
+
+        <div class="card-project">
+          <img
+            class="project-enedis"
+            src="/images/Capture d’écran du 2023-03-20 11-12-01.png"
+          />
         </div>
       </div>
     </section>
@@ -223,41 +239,101 @@
           </button>
         </div>
       </div>
+      <div class="modal-beforeOpen3">
+        <div class="modal-content3">
+          <img
+            class="modal-image3"
+            src="/images/Capture d’écran du 2023-03-20 11-12-01.png"
+          />
+          <div class="modal-text3">
+            <h3 class="modal-title3">Enedis</h3>
+            <p class="modal-description3">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+              nihil nisi corporis fugit enim ipsum natus accusantium odio, hic
+              quae? Laboriosam nulla delectus cumque deserunt, accusantium sint
+              eum harum culpa consequatur deleniti. Cumque iure beatae debitis
+              accusantium quisquam, illo temporibus ea delectus soluta hic
+              repellat porro nulla voluptatibus deserunt quos pariatur, incidunt
+              neque reprehenderit sed<br />
+              <button>Voir le site</button>
+            </p>
+          </div>
+          <button type="button3">
+            <i class="close3">X</i>
+          </button>
+        </div>
+      </div>
     </section>
 
     <section class="contact-section" id="contact">
-      <h2 class="titleForm">Contact</h2>
-      <form id="form">
-        <div id="from">
+      <div class="container-title-contact">
+        <h2 class="titleForm">Contact</h2>
+      </div>
+      <div class="form-container">
+      <form type="submit" class="form">
+        <div class="name-area">
           <label for="name">Nom <sup>*</sup></label>
-          <input type="text" id="name" name="name" />
+          <input type="text" class="name-input" id="name" name="name" />
         </div>
 
-        <div id="reply">
+        <div class="email-area">
           <label for="email">E-Mail <sup>*</sup></label>
-          <input type="email" id="email" name="email" />
+          <input type="email" class="email-input" id="email" name="email" />
         </div>
 
-        <div id="message">
-          <label for="msg" cols="30" rows="1">Message</label>
-          <textarea id="msg" name="user_message"></textarea>
+        <div class="message-area">
+          <label for="msg">Message</label>
+          <textarea
+            id="msg"
+            class="user-message"
+            name="user_message"
+          ></textarea>
         </div>
-
-        <div class="button">
-          <button type="submit">Envoyer</button>
+        <div class="placeButtonSubmit">
+          <button class="submit-button" type="submit">Envoyer</button>
         </div>
       </form>
+    </div>
+      <div class="message-error-container">
 
-      <div id="logos">
-        <img src="./images/Rectangle 24.png" alt="logo Linkedin " />
-        <img src="./images/Rectangle 25.png" alt="logo github " />
+        <p id="message-error"></p>
       </div>
+
+           <div class="business-card-container">
+        <div class="business-card">
+          <div class="card-face card-front"></div>
+          <div class="card-back-container">
+          <div class="card-face card-back">
+            <div class="business-card-content">
+              <p class="bonjour-card">
+                Bonjour <span class="welcome-user"></span>, bienvenue sur mon portfolio !
+              </p>
+              <span><p class="email-card">E-mail : <span class="email"></span></p>
+              <p class="message-card">
+                J'ai bien reçu votre message : <br />"<span
+                  class="message"
+                ></span
+                >". 
+                <br />
+                Je vous recontacterai dans les plus brefs délais
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
     </section>
+  
+  
+    <button class="back-to-top">
+      <img class="back-to-top-img" src="images/chevron-double-up.svg" />
+    </button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="index.js"></script>
     <script src="home.js"></script>
     <script src="skills.js"></script>
     <script src="projects.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
 .

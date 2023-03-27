@@ -141,3 +141,23 @@ modalCloseButton2.addEventListener("click", () => {
   beforeModal2.classList.add("modal-beforeOpen2");
   beforeModal2.classList.remove("modal-background2");
 });
+
+/////// TROISIEME MODALE /////////////
+
+const modalBackground3 = document.querySelector(".modal-background3");
+const beforeModal3 = document.querySelector(".modal-beforeOpen3");
+const modalContent3 = document.querySelector(".modal-content3");
+const modalImageDeux3 = document.querySelector(".project-enedis");
+const modalTitle3 = document.querySelector(".modal-title");
+const modalDescription3 = document.querySelector(".modal-description3");
+const modalCloseButton3 = document.querySelector(".close3");
+
+modalImageDeux3.addEventListener("click", () => {
+  beforeModal3.classList.remove("modal-beforeOpen3");
+  beforeModal3.classList.add("modal-background3");
+});
+
+modalCloseButton3.addEventListener("click", () => {
+  beforeModal3.classList.add("modal-beforeOpen3");
+  beforeModal3.classList.remove("modal-background3");
+});

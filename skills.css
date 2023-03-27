@@ -8,8 +8,14 @@
 }
 .skills-section img {
   margin: 10px 15px;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
+}
+.skills-section img:hover {
+  transform: scale(1.4);
+  transition: 0.4s ease-out;
+  filter: blur(0.8px);
+  cursor: pointer;
 }
 .skills-title {
   font-size: 3rem;
@@ -47,10 +53,42 @@
   color: rgb(255, 255, 255);
   font-family: "Wallpoet";
 }
-.div-skills {
+.front-skills {
   display: flex;
   justify-content: space-around;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
 }
+
+.front-skills.show {
+  opacity: 1;
+}
+.animation-reset {
+  animation: none;
+}
+
+.back-skills {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.back-skills.show {
+  opacity: 1;
+}
+
+.tools-skills {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.tools-skills.show {
+  opacity: 1;
+}
+
 .skills-logo {
   width: 60%;
   display: flex;
@@ -135,7 +173,15 @@
     margin-right: 15%;
     background-color: rgba(240, 248, 255, 0.045);
   }
-  .div-skills p {
+  .front-skills p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .back-skills p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .tools-skills p {
     font-size: 2rem;
     text-align: center;
   }

@@ -47,4 +47,57 @@ const skillObserver = new IntersectionObserver((entries) => {
 });
 
 skillObserver.observe(document.querySelector(".skills-section"));
-skillObserver.observe(document.querySelector("#skill-background"));
+
+//// ANIMATION SKILLS ///
+
+const frontSkills = document.querySelector(".front-skills");
+const backSkills = document.querySelector(".back-skills");
+const toolSkills = document.querySelector(".tools-skills");
+
+/* function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function showfrontSkills() {
+  if (isInViewport(frontSkills)) {
+    frontSkills.classList.add("show");
+  } else {
+    frontSkills.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", showfrontSkills);
+ */
+
+const frontSkillsgObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const div = entry.target;
+
+    switch (true) {
+      case entry.isIntersecting:
+        if (!div.classList.contains("show")) {
+          div.classList.add("show");
+        } else {
+          div.classList.remove("show");
+          void div.offsetWidth;
+          div.classList.add("show");
+        }
+        div.classList.remove("animation-reset");
+        break;
+      case !entry.isIntersecting:
+        div.classList.add("animation-reset");
+        break;
+    }
+  });
+});
+
+frontSkillsgObserver.observe(frontSkills);
+frontSkillsgObserver.observe(backSkills);
+frontSkillsgObserver.observe(toolSkills);

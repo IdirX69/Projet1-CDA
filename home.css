@@ -9,9 +9,19 @@
   border: none;
   text-decoration: none;
 }
+#circle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(60, 73, 77);
+  margin-bottom: 0px;
 }
 
 .home-section h2 {
@@ -35,18 +45,18 @@ h3 {
   width: 100%;
   color: white;
   line-height: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .home-img {
   margin-bottom: 3rem;
   position: absolute;
-  bottom: 15%;
-  left: 16%;
+  bottom: 20%;
+  left: 18%;
 }
 .home-img img {
   height: 280px;
-  border-radius: 140px;
+  border-radius: 360px;
   animation: avatar linear 3.5s infinite alternate;
   right: 15%;
 }
@@ -59,12 +69,17 @@ h3 {
   filter: blur(0.8px);
   cursor: pointer;
 }
+
+.text-target-container {
+  display: flex;
+  justify-content: center;
+}
 #text-target {
   color: aqua;
   font-size: 1.5rem;
   position: absolute;
   top: 82.5%;
-  right: 20%;
+  left: 28%;
   width: 60%;
   font-family: "Wallpoet";
 }
@@ -75,12 +90,11 @@ h3 {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: rgb(60, 73, 77);
+  background-color: rgb(58, 67, 69);
   border-bottom: 1px solid aqua;
   z-index: 10;
   transition: 1s;
 }
-
 .navigation ul {
   margin-left: 1rem;
   width: 85%;
@@ -94,12 +108,17 @@ h3 {
   display: flex;
   align-items: center;
 }
+
 a {
   color: white;
 }
 .hidden {
   transform: translateY(-80px);
   transition: 0.4s;
+}
+.social-container {
+  display: flex;
+  justify-content: center;
 }
 .social-network {
   height: 2rem;
@@ -112,7 +131,42 @@ a {
   transition: 1.1s ease-out;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 5s;
+  animation: buttonTop 3s linear infinite alternate;
+  color: white;
+  padding: 1em;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.3rem;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
 /* animation */
+
+@keyframes buttonTop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
 @keyframes blow {
   0% {
     transform: translate(-50%, -50%);
@@ -172,15 +226,19 @@ a {
   .home-paragraph span {
     font-size: 2.5rem;
   }
+  .home-section h2 {
+    width: 100vw;
+  }
   .home-section h2 span {
     font-family: "Wallpoet";
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 4rem;
   }
+
   .home-section h3 span {
     margin-top: 2rem;
     margin-bottom: 3rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
   .home-section h3 {
     margin-top: 2rem;
@@ -195,12 +253,19 @@ a {
     bottom: 35%;
     left: 2rem;
   }
+  .social-network .fa-brands {
+    margin-top: 5rem;
+  }
   .navigation {
     height: 80px;
   }
   .navigation li {
     height: 80px;
     font-size: 1.6rem;
+  }
+  a:hover {
+    color: aqua;
+    transform: scale(1.2);
   }
   #text-target {
     width: 50%;
