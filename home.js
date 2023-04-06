@@ -15,7 +15,7 @@ let array = [
 ];
 let wordIndex = 0;
 let letterIndex = 0;
-
+const testPR = 100;
 const createLetter = () => {
   const letter = document.createElement("span");
   target.appendChild(letter);
